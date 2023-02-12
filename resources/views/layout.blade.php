@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>AutoDealas.lt</h1>
+    <h1>XD</h1>
     {{-- VIEW OUTPUT --}}
     @yield('content')
 </body>
