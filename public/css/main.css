@@ -1,0 +1,182 @@
+body{
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    margin: 0px;
+}
+.wrapper {
+    min-height: 100%;
+    min-width: 1240px;
+    padding-bottom: 300px;
+    width: 100vw;
+}
+
+.page-header{
+    background-color:#fff;
+}
+
+div > .page-header{
+    box-sizing: border-box;
+    display: block;
+}
+.page-header::after , .page-header::before{
+    display: table;
+}
+.navbar {
+    background-color: #fff;
+    height: 60px;
+    margin-bottom: -26px;
+    position: relative;
+    text-align: left;
+
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%23339966' fill-opacity='0.5'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.page-header .header-logo {
+    margin-left: 100px;
+}
+
+.header-logo, .navbar::before{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header-logo img{
+    height: 65px;
+    width: 275px;
+}
+nav {
+    background-color: seagreen;
+    position: relative;
+    display: block;
+    width: 100vw;
+   
+
+
+}
+nav.header-bosch-shadow{
+    box-shadow: 0 3px 3px rgb(0 0 0 / 30%) ;
+}
+nav > div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1240px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+.navigation-items>li {
+    color:#fff;
+    line-height: 40px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+}
+.navigation-items>li>a{
+    color:#fff;
+}
+.navigation-items>li>a:link{
+    text-decoration: none;
+}
+.page-header ul {
+    margin-bottom: 0;
+}
+.header-menu {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+    margin-right: 150px;
+    text-align: center;
+    display: inline-block;
+    
+}
+.header-menu>li {
+    float: right;
+    font-size: 22px;
+    list-style: none;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: inline-block;
+}
+.header-label {
+    color: black;
+    display: inline-block;
+    margin-bottom: 2px;
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.header-menu>li a {
+    color: #333;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    font-weight:500;
+
+}
+.leader-benefits-wrapper .navigation-items>li>a:active, .leader-benefits-wrapper .navigation-items>li>a:hover{
+    color: rgb(32, 95, 59);
+}
+.navigation-items>li.active a{
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #333;
+}
+div > ul{
+    display:block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 20px;
+    margin-inline-end: 0px;
+    padding-inline-start: 50px;
+}
+div > ul.header-menu{
+    display:block;
+    margin-block-start: 0.3em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 50px;
+    padding-inline-start: 10px;
+}
+
+.leader-benefits-wrapper .navigation-items>li.basic a{
+    margin-left: 40px;
+}
+.leader-benefits-wrapper .navigation-items>li.active a{
+    padding-top: 5px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+}
+img.search{
+    width: 24px;
+   height: 28px;  
+}
+img.heart{
+    width: 32px;
+   height: 28px;  
+}
+ul.header-menu{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%23339966' fill-opacity='0.2'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: #fff;
+    border-width: 2px;
+    border-color: seagreen;
+    border-style: solid;
+    border-radius: 10px;
+}
+li.newSkelbimas{
+    background-color: seagreen;
+    border-radius: 5px;
+    margin-top: 7px;
+
+}
+li.newSkelbimas > a {
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
