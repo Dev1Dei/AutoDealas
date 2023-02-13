@@ -14,7 +14,6 @@ body{
 .page-header{
     background-color:#fff;
 }
-
 div > .page-header{
     box-sizing: border-box;
     display: block;
@@ -47,10 +46,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 nav {
     background-color: seagreen;
     position: relative;
-    display: block;
-    width: 100vw;
-   
-
+    display: inline-block;
+    width: 100%;
 
 }
 nav.header-bosch-shadow{
@@ -59,7 +56,7 @@ nav.header-bosch-shadow{
 nav > div {
     margin-left: auto;
     margin-right: auto;
-    width: 1240px;
+    
     box-sizing: border-box;
     display: block;
     position: relative;
@@ -126,17 +123,18 @@ nav > div {
     color: #333;
 }
 div > ul{
-    display:block;
-    margin-block-start: 1em;
+    display:inline-block;
+    text-align: center;
+    margin-block-start: 0.1em;
     margin-block-end: 1em;
-    margin-inline-start: 20px;
+    margin-inline-start: 80px;
     margin-inline-end: 0px;
-    padding-inline-start: 50px;
+    padding-inline-start: 325px;
 }
 div > ul.header-menu{
-    display:block;
+    display:inline-block;
     margin-block-start: 0.3em;
-    margin-block-end: 1em;
+    margin-block-end: 0.12em;
     margin-inline-start: 0px;
     margin-inline-end: 50px;
     padding-inline-start: 10px;
@@ -179,4 +177,31 @@ li.newSkelbimas > a {
     padding-right: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+div.listing{
+    border-style: solid;
+    border-color: seagreen;
+    border-width: 1px;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+a.listingTitle{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline;
+    
+}
+p.listingDescription{
+    color: #333;
+    margin-top: 6px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    line-height: 20px;
+    font-size: 14px;
 }
