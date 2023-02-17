@@ -1,3 +1,6 @@
+*{
+    -webkit-font-smoothing: antialiased;
+}
 body{
     background: #fafafa;
     font-family: Arial, sans-serif;
@@ -178,16 +181,6 @@ li.newSkelbimas > a {
     padding-top: 2px;
     padding-bottom: 2px;
 }
-div.listing{
-    border-style: solid;
-    border-color: seagreen;
-    border-width: 1px;
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom:5px;
-}
 a.listingTitle{
     text-decoration: none;
     font-weight: bold;
@@ -204,4 +197,103 @@ p.listingDescription{
     margin-left: 0px;
     line-height: 20px;
     font-size: 14px;
+}
+.list-item{
+    margin-top: -1px;
+    padding: 8px;
+    position: relative;
+}
+article.list-item{
+    width: 50%;
+    border-color: seagreen;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+div.image{
+    float: left;
+    margin-right: 15px;
+    width: 240px;
+    height: 179px;
+    position: relative;
+}
+img.listingImage{
+    width: 240px;
+    height: 179px;
+}
+div.description{
+    overflow: hidden;
+    margin-top: 18px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+div.up{
+    color: #ffffff;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 2px;
+    background-color: seagreen;
+    border-radius: 2px;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    vertical-align: top;
+    position: relative;
+    height: 18px;
+}
+.starIcon{
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    height: 13px;
+    width: 13px;
+}
+.item-description{
+    color: #333;
+    margin-top: 6px;
+    line-height: 20px;
+}
+.primary{
+    height: 20px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: normal;
+}
+.secondary{
+    height: 20px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: normal;
+}
+h2.item-title{
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline;
+}
+.item-price{
+    line-height: 18px;
+    background-color: seagreen;
+    color: #fff;
+    padding-top: 2px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+   
+    margin-top: 12px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 16px;
+    float: left;
 }

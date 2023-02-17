@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('tags');
             $table->string('model');
             $table->string('make');
+            $table->year('year');
             $table->string('engine');
             $table->string('fuelType');
             $table->string('color');
@@ -37,7 +38,6 @@ return new class extends Migration
             $table->string('traits');
             $table->longText("description");
             $table->string('sellerNumber');
-
             
             $table->timestamps();
         });

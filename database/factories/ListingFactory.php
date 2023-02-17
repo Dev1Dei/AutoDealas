@@ -34,6 +34,7 @@ class ListingFactory extends Factory
             'numberOfSeats' => '5',
             'VIN' => $this->faker->sentence(),
             'price' => '1500',
+            'year' => $this->faker->year(),
             'city' => $this->faker->city(),
             'country' => $this->faker->country(),
             'TPass' => $this->faker->date(),
