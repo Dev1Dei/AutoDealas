@@ -13,7 +13,7 @@ use App\Models\Listing;
 |
 */
 // All Listings
-Route::get('/', function () {
+Route::get('listings', function () {
     return view('listings', [
         'heading' => 'Latest Listings',
         'listings' => Listing::all()
@@ -26,3 +26,7 @@ Route::get('/listings/{id}', function($id){
         'listing' => Listing::find($id)
     ]);
 });
+//Main screen
+Route::get('/', ['as' => 'home_path', 'uses' => function () {
+    return view('home');
+}]);

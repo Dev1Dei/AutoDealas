@@ -58,7 +58,7 @@
             <div class="container leader-benefits-wrapper"> 
                 <ul class="navigation-items">
                     <li class="active">
-                        <a href="/"> Skelbimai </a>
+                        <a href="listings"> Skelbimai </a>
                     </li>
                     <li class="basic"> <a href="/"> Nauji auto </a></li>
                     <li class="basic"> <a href="/"> Auto paskola </a></li>

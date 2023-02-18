@@ -1,0 +1,14 @@
+.container{
+font-size: 14px;
+line-height: 15px;
+font-family: Helvetica,Arial;
+padding: 0;
+-webkit-font-smoothing: antialiased;
+display: block;
+width: 100%;
+margin: 0 auto;
+box-sizing: border-box;
+position: relative;
+max-width: 1140px;
+min-width: 1024px;
+}

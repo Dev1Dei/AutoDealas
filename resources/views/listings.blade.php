@@ -42,32 +42,16 @@
                             --}}
                          </div>
                          <div class="item-price">
-                        
+                            2 000 €
                          </div>
-                    </div>
-                    <div class="item-price">
-                        2 000 €
                     </div>
                 </div>
 
             </div>
     
-           
-        
-        
-        
-        
-        </a>
     
 
     </article>
-
-
-
-    <div class="listing">
-    
-   
-    </div>
 @endforeach
 </body>
 @endsection
