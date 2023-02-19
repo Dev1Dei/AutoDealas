@@ -13,30 +13,30 @@
             <div class="panel-overlay"></div>
             <div class="categories categories-list-container">
                 <div class="buttons">
-                    <a class="button active" href="/" >
+                    <a class="button" href="/" >
                         <div class="category-button cat-btn " id="category-group-1" title="Automobiliai" data-target="caricon">
                             <div class="icons">
                                 <span class="icon car">
                                     
-                                        <img class="caricon" src="{{asset('/assets/Images/car_icon_active.svg')}}">
-                                
-                                        {{--<img class="caricon" src="{{asset('/assets/Images/car_icon_inactive.svg')}}">
+                                        {{--<img class="caricon" src="{{asset('/assets/Images/car_icon_active.svg')}}">
                                         --}}
+                                    <img class="caricon" src="{{asset('/assets/Images/car_icon_inactive.svg')}}">
+                                        
                                 </span>
                             </div>
                             <div class="title">Auto</div>
                         </div>
                     </a>
-                    <a class="button" href="moto">
+                    <div class="button active">
                         <div class="category-button cat-btn" id="category-group-2" title="Motociklai">
                             <div class="icons">
                                 <span class="icon moto">
-                                    <img class="motoricon" src="{{asset('/assets/Images/motorbike_icon_inactive.svg')}}">
+                                    <img class="motoricon" src="{{asset('/assets/Images/motorbike_icon_active.svg')}}">
                                 </span>
                             </div>
                             <div class="title">Motociklai</div>
                         </div>
-                    </a>
+                    </div>
                     <div class="button">
                         <div class="category-button cat-btn" id="category-group-2" title="Ratai">
                             <div class="icons">

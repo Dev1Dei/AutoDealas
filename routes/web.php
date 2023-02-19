@@ -30,3 +30,8 @@ Route::get('/listings/{id}', function($id){
 Route::get('/', ['as' => 'home_path', 'uses' => function () {
     return view('home');
 }]);
+
+Route::get('moto', function()
+{
+    return view('moto');
+});
