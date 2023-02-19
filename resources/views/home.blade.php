@@ -99,6 +99,42 @@
                     </div>
                 </div>
             </div>
+            <div class="search-form">
+                <div id="quick-search-form-container" class="search-form-inner">
+                    <div class="quick-search-form-container form-inputs-container">
+                        <form id="quick-search-form">
+                            <div class="offertype-selection"> 
+                                <div class="form-heading heading-with-checkbox">
+                                    <h1> Automobiliai </h1>
+                                    <a class="adds-count" data-ads-count="10392" id="mainAdsCount">(10392)</a>
+                                </div>
+                                <div class="group-condition" id="groupCondition">
+                                    <input type="checkbox" checked="checked" value="Naudotas" class="checkbox-condition" name="f_434[]" id="f_Naudotas">
+                                    <label for="f_Naudotas"> Naudoti </label>
+                                    <input type="checkbox" checked="checked" value="Naujas" class="checkbox-condition" name="f_434[]" id="f_Naudotas">
+                                    <label for="f_Naudotas"> Nauji </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="left search-field-input-f_1">
+                                    <div class="label">Markė</div>
+                                    <div class="form-input" id="f_1" tabindex="2" value title name="f_1[0]" placeholder="-------">
+                                        <div class="hidden-inputs"> </div>
+                                        <div class="title">--------</div>
+                                        <div class="input-text"> </div>
+                                        <div class="values">
+                                            <div class="value simple show" data-value data-title="Visos markės" data-search="Visos markės">
+                                                <div class="value-records-count"> --- </div>
+                                                <div class="value-title">Visos markės</div>
+                                                <div class="cl"></div>
+                                            </div>
+                                            @include('car-brands', ['carBrands' => $carBrands])
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
             </div>
         </div>
 
