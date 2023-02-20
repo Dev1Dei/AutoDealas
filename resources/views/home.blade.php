@@ -116,10 +116,12 @@
                                 </div>
                             </div>
                             <div class="row">
+                                $grid->quckSearch('title');
                                 <div class="left search-field-input-f_1">
                                     <div class="label">Markė</div>
                                     <div class="form-input" id="f_1" tabindex="2" value title name="f_1[0]" placeholder="-------">
-                                        <div class="hidden-inputs"> </div>
+                                        <div class="hidden-inputs">
+                                        </div>
                                         <div class="title">--------</div>
                                         <div class="input-text"> </div>
                                         <div class="values">
@@ -128,7 +130,16 @@
                                                 <div class="value-title">Visos markės</div>
                                                 <div class="cl"></div>
                                             </div>
-                                            @include('car-brands', ['carBrands' => $carBrands])
+                                                @foreach ($brands as $brand)
+                                                <div class="value simple show" style="display: block;">
+                                                    <div class="value-records-count"> 0 </div>
+                                                    <div class="value-title"> {{$brand['title']}} </div>
+                                                    <div class="cl"></div>
+                                                </div>
+                                                @endforeach
+                                            
+
+
                                         </div>
                                     </div>
                                 </div>

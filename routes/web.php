@@ -1,7 +1,10 @@
 <?php
+
+
 use illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
+use App\Models\Brand;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +22,12 @@ Route::get('listings', function () {
         'listings' => Listing::all()
     ]);
 });
+// All Brands
+Route::get('brands', function () {
+    return view('brands', [
+        'brands' => Brand::all()
+    ]);
+});
 
 //Single Listing
 Route::get('/listings/{id}', function($id){
@@ -28,9 +37,11 @@ Route::get('/listings/{id}', function($id){
 });
 //Main screen
 Route::get('/', ['as' => 'home_path', 'uses' => function () {
-    return view('home');
+    return view('home', [
+        'brands' => Brand::all()
+    ]);
 }]);
-
+// Moto screen
 Route::get('moto', function()
 {
     return view('moto');
