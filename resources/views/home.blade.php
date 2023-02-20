@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                $grid->quckSearch('title');
+    
                                 <div class="left search-field-input-f_1">
                                     <div class="label">Markė</div>
                                     <div class="form-input" id="f_1" tabindex="2" value title name="f_1[0]" placeholder="-------">
