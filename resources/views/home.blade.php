@@ -116,32 +116,59 @@
                                 </div>
                             </div>
                             <div class="row">
-    
                                 <div class="left search-field-input-f_1">
                                     <div class="label">Markė</div>
-                                    <div class="form-input" id="f_1" tabindex="2" value title name="f_1[0]" placeholder="-------">
+                                    <select class="form-input" id="f_1" tabindex="2" value title name="f_1[0]" placeholder="-------">
                                         <div class="hidden-inputs">
                                         </div>
                                         <div class="title">--------</div>
                                         <div class="input-text"> </div>
                                         <div class="values">
-                                            <div class="value simple show" data-value data-title="Visos markės" data-search="Visos markės">
-                                                <div class="value-records-count"> --- </div>
+                                            <option class="value simple show" data-value data-title="Visos markės" data-search="Visos markės">
                                                 <div class="value-title">Visos markės</div>
+                                                <div class="value-records-count"> --- </div>
                                                 <div class="cl"></div>
-                                            </div>
-                                                @foreach ($brands as $brand)
-                                                <div class="value simple show" style="display: block;">
-                                                    <div class="value-records-count"> 0 </div>
-                                                    <div class="value-title"> {{$brand['title']}} </div>
-                                                    <div class="cl"></div>
-                                                </div>
+                                            </option>
+                                            @foreach ($brands as $brand)
+                                                @if($brand['records'] > 0)
+                                                         <option class="value simple show" style="display: block;">
+                                                            <div class="value-title"> {{$brand['title']}} </div>
+                                                            <div class="value-records-count"> {{$brand['records']}} </div>
+                                                            <div class="cl"></div>
+                                                @endif
+                                                </option>
                                                 @endforeach
-                                            
-
-
+                                           
                                         </div>
-                                    </div>
+                                    </select>
+                                    
+                                </div>
+                                <div class="right search-field-input-f_1">
+                                    <div class="label">Modelis</div>
+                                    <select class="form-input" id="f_model_14" tabindex="3" value title name="f_model_14[0]" placeholder="-------">
+                                        <div class="hidden-inputs">
+                                        </div>
+                                        <div class="title">--------</div>
+                                        <div class="input-text"> </div>
+                                        <div class="values">
+                                            <option class="value simple show" data-value data-title="Visos markės" data-search="Visos markės">
+                                                <div class="value-title">Visos markės</div>
+                                                <div class="value-records-count"> --- </div>
+                                                <div class="cl"></div>
+                                            </option>
+                                            @foreach ($brands as $brand)
+                                                @if($brand['records'] > 0)
+                                                         <option class="value simple show" style="display: block;">
+                                                            <div class="value-title"> {{$brand['title']}} </div>
+                                                            <div class="value-records-count"> {{$brand['records']}} </div>
+                                                            <div class="cl"></div>
+                                                @endif
+                                                </option>
+                                                @endforeach
+                                           
+                                        </div>
+                                    </select>
+                                    
                                 </div>
                             </div>
                         </form>
@@ -156,5 +183,18 @@
 </section>
 </div>
 <script src="{{ asset('js/main.js')}}"></script>
+<script>
+    const select = document.getElementById('f_1');
+  
+    select.addEventListener('change', () => {
+      const selectedOption = select.options[select.selectedIndex];
+      const recordsCountElement = selectedOption.querySelector('.value-records-count');
+      console.log(selectedOption);
+      console.log(recordsCountElement);
+      if (recordsCountElement) {
+        recordsCountElement.parentNode.removeChild(recordsCountElement);
+      }
+    });
+  </script>
 </body>
 @endsection
