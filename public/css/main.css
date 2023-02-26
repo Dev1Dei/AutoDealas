@@ -587,6 +587,9 @@ input {
 .quick-search-form-conntainer .row{
     clear: both;
 }
+div.padding{
+    padding: 10px;
+}
 .form-inputs-container .row .left{
     width: 229px;
     float: left;
@@ -755,4 +758,101 @@ padding-right: 2rem !important;
     float: right;
     box-sizing: border-box;
     padding-left: 11px;
+}
+.form-inputs-container .row select {
+    background-size: 18px 8px;
+    cursor: pointer;
+}
+.form-inputs-container .row input, .form-inputs-container .row select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 22px 0 5px;
+    border: 1px solid #DCDCDC;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(220, 220, 220);
+    border-right-color: rgb(220, 220, 220);
+    border-bottom-color: rgb(220, 220, 220);
+    border-left-color: rgb(220, 220, 220);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-size: 13px;
+}
+.form-inputs-container .row .left {
+    width: 50%;
+    float: left;
+    padding: 0 11px 0 0;
+    box-sizing: border-box;
+}
+.form-inputs-container .row input, .form-inputs-container .row select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 22px 0 5px;
+    border: 1px solid #DCDCDC;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-size: 13px;
+}
+.form-inputs-container .row .right {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    padding: 0 0 0 11px;
+}
+.form-inputs-container .row input:hover, .form-inputs-container .row select:hover {
+    border: 1px solid seagreen;
+}
+.form-inputs-container .row option {
+    font-size: 13px;
+    padding: 5px;
+}
+.quick-search-form-container .submit-button-container button .icon {
+    display: block;
+    padding-left: 15px;
+}
+.icon {
+    position: relative;
+}
+.quick-search-form-container .submit-button-container button .icon:before {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 20px;
+}
+.icon.icon-search:before {
+    background-image: url(public/assets/Images/search.svg);
+}
+.quick-search-form-container .submit-button-container button {
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: none;
+    transition: ease-in-out .1s;
+    border: 1px solid rgb(37, 110, 69);
+    background: seagreen;
+    background-image: linear-gradient(112deg, seagreen 0%, seagreen 100%);
+    background-attachment: fixed;
+    font-weight: 500;
+    margin-top: 10px;
 }
