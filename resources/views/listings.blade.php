@@ -26,20 +26,17 @@
                     
                     <div class="item-description">
                          <div class="primary">
-                            1.8 l, Dyzelinas, 2013 m, Mechaninė, 96 kW
-                             {{--{{$listing['engine']}}
-                             //{{$listing['fuelType']}}
-                             //{{$listing['Year']}}
-                             //{{$listing['transmition']}}
-                            --}}
+    
+                            {{$listing['engine']}},
+                             {{$listing['fuelType']}},
+                             {{$listing['Year']}},
+                             {{$listing['transmition']}},
+
                          </div>
                          <div class="secondary">
-                            217 000km., Visureigis, Telšiai
-                            {{--
                                 {{$listing['mileage']}}
                                 {{$listing['Type']}}
                                 {{$listing['city']}}
-                            --}}
                          </div>
                          <div class="item-price">
                             2 000 €

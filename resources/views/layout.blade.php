@@ -61,8 +61,8 @@
                         <a href="listings"> Skelbimai </a>
                     </li>
                     <li class="basic"> <a href="/"> Nauji auto </a></li>
-                    <li class="basic"> <a href="/"> Auto paskola </a></li>
-                    <li class="basic"> <a href="/"> KET </a></li>
+                    
+                  
                     <li class="basic"> <a href="/"> Straipsniai </a></li>
                 </ul>
 

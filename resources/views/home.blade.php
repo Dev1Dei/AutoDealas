@@ -118,24 +118,24 @@
                             <div class="row">
                                 <div class="left search-field-input-f_1">
                                     <div class="label">Markė</div>
-                                    <select class="form-input" id="f_1" tabindex="2" value title name="f_1[0]" placeholder="-------">
+                                    <select class="form-input" id="f_1" onchange="enableSecondSelect()" onchange="updateModelDropdown()" tabindex="2" value title name="f_1[0]" placeholder="-------">
                                         <div class="hidden-inputs">
                                         </div>
                                         <div class="title">--------</div>
                                         <div class="input-text"> </div>
                                         <div class="values">
-                                            <option class="value simple show" data-value data-title="Visos markės" data-search="Visos markės">
-                                                <div class="value-title">Visos markės</div>
-                                                <div class="value-records-count"> --- </div>
+                                            <option class="value simple show" value="" data-value data-title="Visos markės" data-search="Visos markės">
+                                                <div v class="value-title">Visos markės</div>
+                                                <div  class="value-records-count"> --- </div>
                                                 <div class="cl"></div>
                                             </option>
                                             @foreach ($brands as $brand)
-                                                @if($brand['records'] > 0)
-                                                         <option class="value simple show" style="display: block;">
+                                                {{--@if($brand['records'] > 0) --}}
+                                                         <option id="brand" class="value simple show" style="display: block;">
                                                             <div class="value-title"> {{$brand['title']}} </div>
-                                                            <div class="value-records-count"> {{$brand['records']}} </div>
+                                                            {{--<div class="value-records-count"> {{$brand['records']}} </div> --}}
                                                             <div class="cl"></div>
-                                                @endif
+                                               {{-- @endif --}}
                                                 </option>
                                                 @endforeach
                                            
@@ -145,30 +145,26 @@
                                 </div>
                                 <div class="right search-field-input-f_1">
                                     <div class="label">Modelis</div>
-                                    <select class="form-input" id="f_model_14" tabindex="3" value title name="f_model_14[0]" placeholder="-------">
+                                    <select class="form-input" id="f_model_14" tabindex="3" disabled value title name="f_model_14[0]" placeholder="-------">
                                         <div class="hidden-inputs">
                                         </div>
                                         <div class="title">--------</div>
                                         <div class="input-text"> </div>
                                         <div class="values">
-                                            <option class="value simple show" data-value data-title="Visos markės" data-search="Visos markės">
-                                                <div class="value-title">Visos markės</div>
+                                            <option class="value simple show" id="default" data-value data-title="Visi modeliai" data-search="Visi modeliai">
+                                                <div class="value-title">Visi modeliai</div>
                                                 <div class="value-records-count"> --- </div>
                                                 <div class="cl"></div>
                                             </option>
-                                            @foreach ($brands as $brand)
-                                                @if($brand['records'] > 0)
-                                                         <option class="value simple show" style="display: block;">
-                                                            <div class="value-title"> {{$brand['title']}} </div>
-                                                            <div class="value-records-count"> {{$brand['records']}} </div>
-                                                            <div class="cl"></div>
-                                                @endif
+                                            @foreach ($models as $model)
+                                                <option class="value simple show" style="display: block;">
+                                                    <div class="value-title">{{ $model['model'] }}</div>
+                                                    <div class="value-records-count">{{ $model['records'] }}</div>
+                                                    <div class="cl"></div>
                                                 </option>
-                                                @endforeach
-                                           
+                                            @endforeach
                                         </div>
                                     </select>
-                                    
                                 </div>
                             </div>
                         </form>
@@ -184,17 +180,34 @@
 </div>
 <script src="{{ asset('js/main.js')}}"></script>
 <script>
-    const select = document.getElementById('f_1');
-  
-    select.addEventListener('change', () => {
-      const selectedOption = select.options[select.selectedIndex];
-      const recordsCountElement = selectedOption.querySelector('.value-records-count');
-      console.log(selectedOption);
-      console.log(recordsCountElement);
-      if (recordsCountElement) {
-        recordsCountElement.parentNode.removeChild(recordsCountElement);
-      }
-    });
-  </script>
+    function enableSecondSelect() {
+    var firstSelect = document.getElementById("f_1");
+    var secondSelect = document.getElementById("f_model_14");
+    var defaultOption = document.getElementById("default");
+    var selectedBrand = document.getElementById("brand");
+
+    console.log('veikia');
+    if(firstSelect.value !== ""){
+      console.log('leisti');
+      console.log(selectedBrand);
+
+      
+        secondSelect.disabled = false;
+
+
+    } else {
+        secondSelect.disabled = true;
+        secondSelect.value = '-----';
+
+        console.log('neleisti');
+    }
+    }
+
+    window.addEventListener('load'), function() {
+    enableSecondSelect();
+    }
+    
+</script>
+
 </body>
 @endsection
