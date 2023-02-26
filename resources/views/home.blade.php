@@ -87,16 +87,6 @@
                             <div class="title">Priekabos</div>
                         </div>
                     </div>
-                    <div class="button">
-                        <div class="category-button cat-btn" id="category-group-2" title="Nuoma">
-                            <div class="icons">
-                                <span class="icon nuoma">
-                                    <img >
-                                </span>
-                            </div>
-                            <div class="title">Nuoma</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="search-form">
