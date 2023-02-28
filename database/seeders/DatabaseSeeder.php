@@ -23,1742 +23,1764 @@ class DatabaseSeeder extends Seeder
     {
         //==============AIXAM================
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => '300',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => '400',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => '500',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'A721',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'A741',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'A751',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'City',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Crossline',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Crossover',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'D-truck',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'GTI',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'GTO',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Ligier',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Mac',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Mega',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Moskito',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'MultiTruck',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Roadline',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Scouty',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Scouty R',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aixam',
+
+            'brand_id' => '1',
             'model' => 'Kitas',
             'records' => '0',
         ]);
         
         // =======================AUDI=======================
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => '100',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => '200',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => '5000',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => '80',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => '90',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A4 Allroad',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A6 Allroad',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'A9',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Cabriolet',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'e-tron',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'e-tron GT',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'e-tron Sportback',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Q2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Q3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Q4 e-tron',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Q5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Q7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Q8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Quattro',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'R8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS Q3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'RS7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'S8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'SQ2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'SQ5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'SQ7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'TT',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'TT RS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'TTS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'V8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Audi',
+            'brand_id' => '2',
             'model' => 'Kitas',
             'records' => '0',
         ]);
         //=======================ACURA=======================
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'CL',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'ILX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'Integra',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'Legend',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'MDX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'NSX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'RDX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'RL',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'RLX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'RSX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'TL',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'TLX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'TSX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'Vigor',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'ZDX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Acura',
+            'brand_id' => '3',
             'model' => 'Kitas',
             'records' => '0',
         ]);
         //=======================ALFA ROMEO==================
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '145',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '146',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '147',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '155',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '156',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '159',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '164',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '166',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '33',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '4C',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '75',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '8C',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => '90',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Alfasud',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Alfetta',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Arna',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Brera',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Crosswagon',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Crosswagon Q4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Giulia',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Giulietta',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'GT',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'GTV',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Junior',
             'records' => '0',
         ]);
 
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Mito',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'RS/SZ',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'RZ/SZ',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Spider',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Sportwagon',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Sprint',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Stelvio',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Alfa Romeo',
+            'brand_id' => '4',
             'model' => 'Kitas',
             'records' => '0',
         ]);
         // =======================Austin=====================
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Allegro',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Ambasador',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Healey',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Maxi',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Metro',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Mini',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Montego',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Austin',
+            'brand_id' => '5',
             'model' => 'Kitas',
             'records' => '0',
         ]);
         //===================Aston Martin================
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'AR1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Bulldog',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Cygnet',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'DB',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'DB11',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'DB6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'DB7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'DB9',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'DBS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Lagonda',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'One-77',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Rapide',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'V12 Vanquish',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'V12 Vantage',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'V8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Valkyrie',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Vanquish',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Vanquish S',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Vantage',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Virage',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Volante',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Aston Martin',
+            'brand_id' => '6',
             'model' => 'Kitas',
             'records' => '0',
         ]);
 
         //========================BENTLEY==============
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Arnage',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Azure',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Bentayga',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Brooklands',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Continental',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Continental Flying Spur',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Eight',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Mulsanne',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'S1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'S2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'S3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Turbo R',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Turbo RT',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Turbo S',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bentley',
+            'brand_id' => '7',
             'model' => 'Kitas',
             'records' => '0',
         ]);
 
         //====================BMW==================
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'i4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'ix',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '114',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '116',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '118',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '120',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '123',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '125',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '128',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '130',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '135',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '214 Active Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '214 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '216 Active Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '216 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '216d Active Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '218',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '218 Active Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '218 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '220',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '220 Active Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '220 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '225',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '225 Actove Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '228',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '230',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '315',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '316',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '318',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '318 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '318 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '320',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '320 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '320 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '323',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '324',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '325',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '325 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '327',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '328',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '328 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '328 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '330',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '330 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '330 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '335',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '335 Gran Tourer',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '335 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '340',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '346',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '418 Gran Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '420',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '420 Gran Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '420i',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '425',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '428',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '428 Gran Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '430',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '430 Gran Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '435',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '440',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '518',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '520',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '520 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '523',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '524',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '525',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '528',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '530',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '530 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '535',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '535 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '540',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '545',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '550',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '550 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '5GT (F07)',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Active Hybrid 5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '628',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '630',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '630 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '632',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '633',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '635',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '640',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '640 Gran Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '640 Gran Turismo',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '645',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '650',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '650 Gran Coupe',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '725',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '728',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '730',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '732',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '735',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '740',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '745',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '750',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '760',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Active Hybrid 7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '840',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => '850',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'i3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'i3 REx',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'i8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'iX3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M135i',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M235',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M240',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M550',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M550d',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'M6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X5M',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X6M',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Z3M',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Z4 M',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X2',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'X7',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Z1',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Z3',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Z4',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Z8',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'BMW',
+            'brand_id' => '8',
             'model' => 'Kitas',
             'records' => '0',
         ]);
 
         //=====================BUGATTI=================
         CarModel::create([
-            'title' => 'Bugatti',
+            'brand_id' => '9',
             'model' => 'Chiron',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bugatti',
+            'brand_id' => '9',
             'model' => 'EB 110',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bugatti',
+            'brand_id' => '9',
             'model' => 'Veyron',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Bugatti',
+            'brand_id' => '9',
             'model' => 'Kitas',
             'records' => '0',
         ]);
 //===================BUICK==================
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Cascada',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Centurion',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Century',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Electra',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Enclave',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Encore',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Envision',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Lacrosse',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Le Sabre',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Lucerne',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Park Avenue',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Reatta',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Regal',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Rendezvous',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Riviera',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Roadmaster',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Skyhawd',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Skylark',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Verano',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Buick',
+            'brand_id' => '10',
             'model' => 'Kitas',
             'records' => '0',
         ]);
         //=====================CADILLAC==================
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Allante',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'ATS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'BLS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Brougham',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Catera',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Cimarron',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'CT6',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'CTS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Deville',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'DTS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Eldorado',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'ELR',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Escalade',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Fleetwood',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Seville',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'SRX',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'STS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'XLR',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'XT5',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'XTS',
             'records' => '0',
         ]);
         CarModel::create([
-            'title' => 'Cadillac',
+            'brand_id' => '11',
             'model' => 'Kitas',
             'records' => '0',
         ]);
@@ -12590,567 +12612,5 @@ CarModel::create([
     'model' => 'Kitas',
     'records' => '0',
     ]);
-
-    
-
-
-
-       //\App\Models\User::factory(6);
-        //Listing::factory(6)->create();
-        
-       /* Listing::create([
-            'Type' => 'Automobilis',
-            'title' => 'Audi A4 B6',
-            'tags' => 'Cool',
-            'model' => 'A4',
-            'make' => 'Audi',
-            'year' => '2002',
-            'engine' => '2.0l',
-            'fuelType' => 'Benzinas',
-            'color' => 'Dark Blue',
-            'transmition' => 'Manual',
-            'FWD/AWD/RWD' => 'FWD',
-            'defects' => '-',
-            'wheelLocation' => 'LHD',
-            'numberOfDoors' => '4',
-            'numberOfSeats' => '5',
-            'VIN' => 'VIN',
-            'price' => '2000',
-            'city' => 'Kretinga',
-            'country' => 'Lithuania',
-            'TPass' => 'TPass',
-            'traits' => 'Cool',
-            'description' => 'Puikus automobilis',
-            'sellerNumber' => '+3706797660
-            2',
-        ]);
-        Listing::create([
-            'Type' => 'Automobilis',
-            'title' => 'Audi A4 B6',
-            'tags' => 'Cool',
-            'model' => 'A4',
-            'make' => 'Audi',
-            'year' => '2002',
-            'engine' => '2.0l',
-            'fuelType' => 'Benzinas',
-            'color' => 'Dark Blue',
-            'transmition' => 'Manual',
-            'FWD/AWD/RWD' => 'FWD',
-            'defects' => '-',
-            'wheelLocation' => 'LHD',
-            'numberOfDoors' => '4',
-            'numberOfSeats' => '5',
-            'VIN' => 'VIN',
-            'price' => '2000',
-            'city' => 'Kretinga',
-            'country' => 'Lithuania',
-            'TPass' => 'TPass',
-            'traits' => 'Cool',
-            'description' => 'Puikus automobilis',
-            'sellerNumber' => '+3706797660
-            2',
-        ]);
-        Brand::create([
-            'title' => 'Aixam',
-            'records' => '0'
-        ]);
-        
-        Brand::create([
-            'title' => 'Audi',
-            'records' => '0',
-        ]);
-        
-        Brand::create([
-            'title' => 'Acura',
-            'records' => '0',
-        ]);
-        
-        Brand::create([
-            'title' => 'Alfa Romeo',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Austin',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Aston Martin',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Bentley',
-            'records' => '0
-            ',
-        ]); 
-        
-        Brand::create([
-            'title' => 'BMW',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Bugatti',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Buick',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Cadillac',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Chevrolet',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Chrysler',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Citroen',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Dodge',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Dacia',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Daewoo',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Daihatsu',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Ferrari',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Fiat',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Fisker',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Ford',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'GMC',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'GAZ',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Goupil',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Honda',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Hummer',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Hyundai',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Infiniti',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Isuzu',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Iveco',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Jaguar',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Jeep',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Kia',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Lada',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Lancia',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Land Rover',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Lexus',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Lincoln',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Maserati',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Maybach',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Mazda',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Mercedes-Benz',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'MG',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Microcar',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'MINI',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Mitsubishi',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Moskvich',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Nissan',
-            'records' => '0
-            ',
-        ]);
-       
-        
-        Brand::create([
-            'title' => 'Opel',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Peugeot',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Pontiac',
-            'records' => '0
-            ',
-        ]);
-         
-        Brand::create([
-            'title' => 'Porsche',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Renault',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Rolls-Royce',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Rover',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Saab',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Scion',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Seat',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Skoda',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Smart',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Ssangyong',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Subaru',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Suzuki',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Tesla',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Toyota',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Trabant',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Triumph',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'UAZ',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Volkswagen',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Volvo',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'ZAZ',
-            'records' => '0
-            ',
-        ]);
-        
-        Brand::create([
-            'title' => 'Kita',
-            'records' => '0
-            ',
-        ]);
-       
-/*
-    //    Listing::create([
-    //     'Type' => 'Lengvasis Automobilis',
-    //     'title' => 'Opel Astra',
-    //     'tags' => 'gay, awesome',
-    //     'make' => 'Opel',
-    //     'model' => 'Astra',
-    //     'engine' => '0
-    .8 l. 90KW (0
-    22 Ag)',
-    //     'fuelType' => 'Benzinas',
-    //     'color' => 'Mėlyna',
-    //     'transmition' => 'Mechaninė',
-    //     'FWD/AWD/RWD' => 'Priekiniai varantys ratai',
-    //     'defects' => 'Be defektų',
-    //     'wheelLocation' => 'Priekiniai varantys ratai',
-    //     'numberOfDoors' => '4/5',
-    //     'numberOfSeats' => '5',
-    //     'VIN' => '4Y0
-    SL65848Z40
-    439',
-    //     'price' => '0
-    500',
-    //     'city' => 'Klaipėda',
-    //     'country' => 'Lietuva',
-    //     'TPass' => '2024-05',
-    //     'traits' => 'El.Langai, Kablys, Klimato kontrolė, Lengvo lydinio ratlankiai, Audio grotuvas, Oro pagalvės, Kritulių jutiklis, Rūko žibintai, Serviso knygelė',
-    //     'description' => 'Puikus automobilis iki bažnyčios ir namo',
-    //     'sellerNumber' => '+3706797660
-    2',
-
-    //    ]);
-
-    //    Listing::create([
-    //     'Type' => 'Lengvasis Automobilis',
-    //     'title' => 'Opel Astra2',
-    //     'tags' => 'gay, awesome',
-    //     'make' => 'Opel',
-    //     'model' => 'Astra2',
-    //     'engine' => '0
-    .8 l. 90KW (0
-    22 Ag)',
-    //     'fuelType' => 'Benzinas',
-    //     'color' => 'Mėlyna',
-    //     'transmition' => 'Mechaninė',
-    //     'FWD/AWD/RWD' => 'Priekiniai varantys ratai',
-    //     'defects' => 'Be defektų',
-    //     'wheelLocation' => 'Priekiniai varantys ratai',
-    //     'numberOfDoors' => '4/5',
-    //     'numberOfSeats' => '5',
-    //     'VIN' => '4Y0
-    SL65848Z40
-    439',
-    //     'price' => '0
-    500',
-    //     'city' => 'Klaipėda',
-    //     'country' => 'Lietuva',
-    //     'TPass' => '2024-05',
-    //     'traits' => 'El.Langai, Kablys, Klimato kontrolė, Lengvo lydinio ratlankiai, Audio grotuvas, Oro pagalvės, Kritulių jutiklis, Rūko žibintai, Serviso knygelė',
-    //     'description' => 'Puikus automobilis iki bažnyčios ir namo',
-    //     'sellerNumber' => '+3706797660
-    2',
-
-    //    ]);
-    */
-
     }
 }
