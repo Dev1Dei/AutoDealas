@@ -109,7 +109,7 @@
                             <div class="row">
                                 <div class="left search-field-input-f_1">
                                     <div class="label">Markė</div>
-                                    <select class="form-input" id="f_1" onchange="enableSecondSelect()" onchange="updateModelDropdown()" tabindex="2" value title name="f_1[0]" placeholder="-------">
+                                    <select class="form-input" id="f_1" onchange="enableSecondSelect()" tabindex="2" value title name="f_1[0]" placeholder="-------">
                                         <div class="hidden-inputs">
                                         </div>
                                         <div class="title">--------</div>
@@ -383,36 +383,6 @@
 
 </section>
 </div>
-<script src="{{ asset('js/main.js')}}"></script>
-<script>
-    function enableSecondSelect() {
-    var firstSelect = document.getElementById("f_1");
-    var secondSelect = document.getElementById("f_model_14");
-    var defaultOption = document.getElementById("default");
-    var selectedBrand = document.getElementById("brand");
-
-    console.log('veikia');
-    if(firstSelect.value !== ""){
-      console.log('leisti');
-      console.log(selectedBrand);
-
-      
-        secondSelect.disabled = false;
-
-
-    } else {
-        secondSelect.disabled = true;
-        secondSelect.value = '-----';
-
-        console.log('neleisti');
-    }
-    }
-
-    window.addEventListener('load'), function() {
-    enableSecondSelect();
-    }
-    
-</script>
 
 </body>
 @endsection
