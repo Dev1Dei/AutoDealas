@@ -3,6 +3,7 @@
 <head>
     <link href="/css/main.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 </head>
 <body>
 
@@ -100,22 +101,22 @@
                                     <a class="adds-count" data-ads-count="10392" id="mainAdsCount">(10392)</a>
                                 </div>
                                 <div class="group-condition" id="groupCondition">
-                                    <input type="checkbox" checked="checked" value="Naudotas" class="checkbox-condition" name="f_434[]" id="f_Naudotas">
+                                    <input type="checkbox" checked="checked" value="Naudotas" class="checkbox-condition" id="f_Naudotas">
                                     <label for="f_Naudotas"> Naudoti </label>
-                                    <input type="checkbox" checked="checked" value="Naujas" class="checkbox-condition" name="f_434[]" id="f_Naudotas">
+                                    <input type="checkbox" checked="checked" value="Naujas" class="checkbox-condition" id="f_Naudotas">
                                     <label for="f_Naudotas"> Nauji </label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="left search-field-input-f_1">
                                     <div class="label">Markė</div>
-                                    <select class="form-input" id="f_1" onchange="enableSecondSelect()" tabindex="2" value title name="f_1[0]" placeholder="-------">
+                                    <select class="form-input" id="f_1"  onchange="enableSecondSelect()" placeholder="-------">
                                         <div class="hidden-inputs">
                                         </div>
                                         <div class="title">--------</div>
                                         <div class="input-text"> </div>
                                         <div class="values">
-                                            <option class="value simple show" value="" data-value data-title="Visos markės" data-search="Visos markės">
+                                            <option class="value simple show">
                                                 <div v class="value-title">Visos markės</div>
                                                 <div  class="value-records-count"> --- </div>
                                                 <div class="cl"></div>
@@ -136,7 +137,7 @@
                                 </div>
                                 <div class="right search-field-input-f_1">
                                     <div class="label">Modelis</div>
-                                    <select class="form-input" id="f_model_14" tabindex="3" disabled value title name="f_model_14[0]" placeholder="-------">
+                                    <select class="form-input" id="f_model_14" tabindex="3" value title name="f_model_14[0]" placeholder="-------">
                                         <div class="hidden-inputs">
                                         </div>
                                         <div class="title">--------</div>
@@ -383,6 +384,36 @@
 
 </section>
 </div>
+<script src="{{ asset('js/main.js')}}"></script>
+{{--<script>
+    function enableSecondSelect() {
+    var firstSelect = document.getElementById("f_1");
+    var secondSelect = document.getElementById("f_model_14");
+    var defaultOption = document.getElementById("default");
+    var selectedBrand = document.getElementById("brand");
+
+    console.log('veikia');
+    if(firstSelect.value !== ""){
+      console.log('leisti');
+      console.log(selectedBrand);
+
+      
+        secondSelect.disabled = false;
+
+
+    } else {
+        secondSelect.disabled = true;
+        secondSelect.value = '-----';
+
+        console.log('neleisti');
+    }
+    }
+
+    window.addEventListener('load'), function() {
+    enableSecondSelect();
+    }
+    
+</script>--}}
 
 </body>
 @endsection
