@@ -1,10 +1,15 @@
 <template>
-    <nav class="ml-6">
-        <ul class="flex list-disc space-x-4 list-inside">
-            <li>
-                <Link href="/" class="text-black hover:text-gray-700" :class="{'font-bold bg-white border-2 border-solid border-red-500 ': $page.component === 'Home'}">Home</Link></li>
-            <li><Link href="/users" class="text-black-700 hover:text-gray-700" :class="{'font-bold bg-white border-2 border-solid border-red-500 ': $page.component === 'Users'}" >Users</Link></li>
-            <li><Link href="/settings" class="text-black-700 hover:text-gray-700" :class="{'font-bold bg-white border-2 border-solid border-red-500 ': $page.component === 'Settings'}">Settings</Link></li>
+    <nav class="ml-auto">
+        <ul class="flex list-none space-x-4 list-inside">
+            <div class="border-solid border-gray-500 border-l p-2 ">
+                <li><Link href="/" class="pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Home'}">Skelbimai</Link></li>
+            </div>
+            <div class="border-solid border-gray-500 border-l p-2">
+                <li><Link href="/users" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Users'}">Prisijungti</Link></li>
+            </div>
+            <div class="border-solid border-gray-500 border-l p-2">
+                <li><Link href="/settings" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Settings'}">Pridėti skelbimą</Link></li>
+            </div>
         </ul>
     </nav>
 </template>

@@ -1,25 +1,26 @@
 <template>
-<section class="p-5 bg-green-600">
+<section class="p-4 bg-gradient-to-r from-green-600 via-green-500 to-green-300 shadow-xl">
 <header class="flex">
-
-    <h1 class="italic text-4xl font-bold text-xl">Autodealas.lt</h1>
-
+    <Link href="/"><h1 class="italic text-5xl mt-auto text-white font-bold pl-24">AutoDealas.lt</h1></Link>
+    <Nav class="ml-auto mt-auto mb-auto" />
 </header> 
 
-<div class="flex" style="background-color: seagreen;">
-    <Nav />
-</div>
-</section>
 
-<section  class="p-6"><slot /></section>
+</section>
+<section  class="p-6 ">
+    <div class="max-w-2xl mx-auto">
+    <slot />
+    </div>
+</section>
     
 
 </template>
 
 <script>
 import Nav from "./Nav.vue";
+import { Link } from '@inertiajs/vue3';
 export default {
-    components: { Nav },
+    components: { Nav, Link },
 
 };
 </script>

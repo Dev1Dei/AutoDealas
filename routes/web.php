@@ -26,7 +26,6 @@ Route::get('/users', function () {
     return inertia('Users', [
         'time' => now()->toTimeString()
     ]);
-    
 });
 Route::get('/settings', function () {
     return inertia('Settings');
