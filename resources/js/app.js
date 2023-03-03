@@ -2,6 +2,10 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 
 createInertiaApp({
+  progress: {
+    color: '#2e8b57',
+    showSpinner: true,
+  },
   resolve: name => {
     const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
     return pages[`./Pages/${name}.vue`]
@@ -11,4 +15,4 @@ createInertiaApp({
       .use(plugin)
       .mount(el)
   },
-})
+});

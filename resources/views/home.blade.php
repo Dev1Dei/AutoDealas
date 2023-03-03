@@ -385,7 +385,7 @@
 </section>
 </div>
 <script src="{{ asset('js/main.js')}}"></script>
-{{--<script>
+<script>
     function enableSecondSelect() {
     var firstSelect = document.getElementById("f_1");
     var secondSelect = document.getElementById("f_model_14");
@@ -413,7 +413,7 @@
     enableSecondSelect();
     }
     
-</script>--}}
+</script>
 
 </body>
 @endsection

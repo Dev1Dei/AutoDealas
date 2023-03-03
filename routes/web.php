@@ -18,7 +18,28 @@ use Illuminate\Support\Facades\DB;
 |
 */
 // All Listings
-// Option A
+
+Route::get('/', function () {
+    return inertia('Home');
+});
+Route::get('/users', function () {
+    return inertia('Users', [
+        'time' => now()->toTimeString()
+    ]);
+    
+});
+Route::get('/settings', function () {
+    return inertia('Settings');
+});
+Route::post('/logout', function () {
+    dd('logout');
+});
+
+
+
+
+//Pre-Vue
+/*
 Route::get('listings', function () {
     return view('listings', [
         'heading' => 'Latest Listings',
@@ -26,7 +47,6 @@ Route::get('listings', function () {
     ]);
 });
 // All Brands
-// Option B
 Route::get('brands', function () {
     return view('brands', [
         'brands' => Brand::all()
@@ -72,7 +92,9 @@ Route::get('/', function () {
     $models = CarModel::all();
 
     // Pass the brands and models to the home view
-    return view('home', compact('brands', 'models'));
+    return view
+    ('home', compact('brands', 'models'));
 
 
 });
+*/
