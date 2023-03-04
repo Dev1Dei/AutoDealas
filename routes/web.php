@@ -22,10 +22,11 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', function () {
     return inertia('Home');
 });
+Route::get('/listings', function () {
+    return inertia('Listings');
+});
 Route::get('/users', function () {
-    return inertia('Users', [
-        'time' => now()->toTimeString()
-    ]);
+    return inertia('Users');
 });
 Route::get('/settings', function () {
     return inertia('Settings');

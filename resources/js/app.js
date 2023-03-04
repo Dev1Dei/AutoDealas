@@ -1,6 +1,6 @@
 import { createApp, h } from 'vue'
-import { createInertiaApp } from '@inertiajs/vue3'
-
+import { createInertiaApp, Link } from '@inertiajs/vue3'
+import Layout from "./Shared/Layout.vue";
 createInertiaApp({
   progress: {
     color: '#2e8b57',
@@ -13,6 +13,8 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .component("Link", Link)
+      .component("Layout", Layout)
       .mount(el)
   },
 });
