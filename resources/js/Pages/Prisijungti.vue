@@ -1,6 +1,6 @@
 <template>
   
-        <h1 class="text-4xl font-bold">Users</h1>
+        <h1 class="text-4xl font-bold">Prisijungti</h1>
 
 </template>
 

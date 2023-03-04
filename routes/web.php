@@ -25,11 +25,11 @@ Route::get('/', function () {
 Route::get('/listings', function () {
     return inertia('Listings');
 });
-Route::get('/users', function () {
-    return inertia('Users');
+Route::get('/prisijungti', function () {
+    return inertia('Prisijungti');
 });
-Route::get('/settings', function () {
-    return inertia('Settings');
+Route::get('/newlisting', function () {
+    return inertia('NewListing');
 });
 Route::post('/logout', function () {
     dd('logout');

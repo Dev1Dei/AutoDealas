@@ -5,10 +5,10 @@
                 <li><Link href="/listings" class="pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Listings'}">Skelbimai</Link></li>
             </div>
             <div class="border-solid border-gray-500 border-l p-2">
-                <li><Link href="/users" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Users'}">Prisijungti</Link></li>
+                <li><Link href="/prisijungti" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Prisijungti'}">Prisijungti</Link></li>
             </div>
             <div class="border-solid border-gray-500 border-l p-2">
-                <li><Link href="/settings" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Settings'}">Pridėti skelbimą</Link></li>
+                <li><Link href="/newlisting" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'NewListing'}">Pridėti skelbimą</Link></li>
             </div>
         </ul>
     </nav>
