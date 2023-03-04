@@ -1,6 +1,10 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
+import axios from 'axios';
 import Layout from "./Shared/Layout.vue";
+import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+import { Ziggy } from './ziggy';
+
 createInertiaApp({
   progress: {
     color: '#2e8b57',
@@ -13,6 +17,7 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .use(ZiggyVue, Ziggy)
       .component("Link", Link)
       .component("Layout", Layout)
       .mount(el)

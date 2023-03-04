@@ -21,6 +21,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+      
+        
+        
+        
+        
+    
+       
         //==============AIXAM================
         CarModel::create([
 
@@ -13035,71 +13042,3 @@ CarModel::create([
     
 }
 }
-/*
-    //    Listing::create([
-    //     'Type' => 'Lengvasis Automobilis',
-    //     'title' => 'Opel Astra',
-    //     'tags' => 'gay, awesome',
-    //     'make' => 'Opel',
-    //     'model' => 'Astra',
-    //     'engine' => '0
-    .8 l. 90KW (0
-    22 Ag)',
-    //     'fuelType' => 'Benzinas',
-    //     'color' => 'Mėlyna',
-    //     'transmition' => 'Mechaninė',
-    //     'FWD/AWD/RWD' => 'Priekiniai varantys ratai',
-    //     'defects' => 'Be defektų',
-    //     'wheelLocation' => 'Priekiniai varantys ratai',
-    //     'numberOfDoors' => '4/5',
-    //     'numberOfSeats' => '5',
-    //     'VIN' => '4Y0
-    SL65848Z40
-    439',
-    //     'price' => '0
-    500',
-    //     'city' => 'Klaipėda',
-    //     'country' => 'Lietuva',
-    //     'TPass' => '2024-05',
-    //     'traits' => 'El.Langai, Kablys, Klimato kontrolė, Lengvo lydinio ratlankiai, Audio grotuvas, Oro pagalvės, Kritulių jutiklis, Rūko žibintai, Serviso knygelė',
-    //     'description' => 'Puikus automobilis iki bažnyčios ir namo',
-    //     'sellerNumber' => '+3706797660
-    2',
-
-    //    ]);
-
-    //    Listing::create([
-    //     'Type' => 'Lengvasis Automobilis',
-    //     'title' => 'Opel Astra2',
-    //     'tags' => 'gay, awesome',
-    //     'make' => 'Opel',
-    //     'model' => 'Astra2',
-    //     'engine' => '0
-    .8 l. 90KW (0
-    22 Ag)',
-    //     'fuelType' => 'Benzinas',
-    //     'color' => 'Mėlyna',
-    //     'transmition' => 'Mechaninė',
-    //     'FWD/AWD/RWD' => 'Priekiniai varantys ratai',
-    //     'defects' => 'Be defektų',
-    //     'wheelLocation' => 'Priekiniai varantys ratai',
-    //     'numberOfDoors' => '4/5',
-    //     'numberOfSeats' => '5',
-    //     'VIN' => '4Y0
-    SL65848Z40
-    439',
-    //     'price' => '0
-    500',
-    //     'city' => 'Klaipėda',
-    //     'country' => 'Lietuva',
-    //     'TPass' => '2024-05',
-    //     'traits' => 'El.Langai, Kablys, Klimato kontrolė, Lengvo lydinio ratlankiai, Audio grotuvas, Oro pagalvės, Kritulių jutiklis, Rūko žibintai, Serviso knygelė',
-    //     'description' => 'Puikus automobilis iki bažnyčios ir namo',
-    //     'sellerNumber' => '+3706797660
-    2',
-
-    //    ]);
-    */
-
-
-

@@ -7,8 +7,8 @@
 
 
 </section>
-<section  class="p-6 ">
-    <div class="max-w-4xl mx-auto bg-white p-6 border-2 border-gray-100">
+<section  class="p-4">
+    <div class="max-w-4xl mx-auto bg-white p-6 border-2 border-green-400">
     <slot />
     </div>
 </section>
