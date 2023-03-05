@@ -1,12 +1,13 @@
 <template>
 
-    <h1 class="text-4xl font-bold">yeet</h1>
-
+<h1>Double Yeet {{ listing.id }}</h1>
 </template>
 
 <script>
-import Layout from "../Shared/Layout.vue";
-export default {
-layout: Layout,
-};
+export default{
+    props: {
+        listing: Object,
+    },
+}
+
 </script>

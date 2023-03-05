@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\FrontPageController;
+use App\Http\Controllers\ModelController;
 use illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
@@ -19,25 +21,9 @@ use Illuminate\Support\Facades\DB;
 */
 // All Listings
 
-Route::get('/', function () {
-    return inertia('Home');
-    // Get the count of listings for each make and update the brands table
-    $countedData = Listing::select('make','model', DB::raw('count(*) as total'))
-        ->groupBy('make')
-        ->groupBy('model')
-        ->get();
+Route::resource('/', FrontPageController::class);
+Route::resource('/models', ModelController::class);
 
-    foreach ($countedData as $count) {
-        Brand::updateOrInsert(
-            ['title' => $count->make],
-            ['records' => $count->total]
-        );
-        CarModel::updateOrInsert(
-            ['model' => $count->model],
-            ['records' => $count->total]
-        );
-    };
-});
 Route::get('/listings', [ListingController::class, 'index']);
 Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listings.show');
 

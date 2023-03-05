@@ -6,11 +6,9 @@
             <div class="w-1/2 border-r border-gray-400">
               <div class="p-8">
                 <h2 class="text-xl font-bold mb-4">Markės</h2>
-                <select class="block w-full py-2 px-3 border border-gray-400 mb-4">
+                <select class="block w-full py-2 px-3 border border-gray-400 mb-4" v-model="selection">
                   <option>Select an option</option>
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
+                  <option v-for="brand in carBrands" :key="brand.id" :value="brand.id">{{ brand.title }}</option>
                 </select>
                 <h2 class="text-xl font-bold mb-4">Kaina</h2>
                 <div class="flex mb-4">
@@ -93,9 +91,8 @@
                 <h2 class="text-xl font-bold mb-4">Modelis</h2>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4">
                   <option>Select an option</option>
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
+                  <option v-for="model in models" :key="model.id">{{ model.model }}</option>
+                  
                 </select>
                 <h2 class="text-xl font-bold mb-4">Metai</h2>
                 <div class="flex mb-4">
@@ -222,11 +219,36 @@
 </template>
 
 <script>
+import { router } from "@inertiajs/vue3";
 import Layout from "../Shared/Layout.vue";
 export default {
     layout: Layout,    
     props: {
         brands: String,
+        models: Array,
+    },
+    watch: {
+      models:{
+        handler(newVal,oldVal){
+          this.carBrands = newVal;
+        }
+      },
+      selection:{
+        handler(newVal, oldVal){
+          router.get(`/models/${newVal}`)
+        }
+      }
+    },
+    data(){
+      return{
+        carBrands: [],
+        selection: '',
+        carModels: [],
+      
+      }
+    },
+    created(){
+      this.carBrands = this.brands;
     },
 };
 </script>
