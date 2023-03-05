@@ -1,0 +1,23 @@
+/* Custom select arrow */
+.select-arrow::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: rgb(38, 152, 197); /* Change the color to your desired color */
+  }
+  
+  /* Remove default arrow */
+  .select-arrow::-ms-expand {
+    display: none;
+  }
+  
+  .select-arrow::-webkit-select-arrow {
+    display: none;
+  }
+  
+  .select-arrow:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
