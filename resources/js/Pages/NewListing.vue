@@ -1,6 +1,7 @@
 <template>
-
+    <div class="max-w-4xl mx-auto bg-white p-6 border-2 border-green-400">
         <h1 class="text-4xl font-bold">Naujas Skelbimas</h1>
+    </div>
    
 </template>
 

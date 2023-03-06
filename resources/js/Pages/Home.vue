@@ -1,7 +1,7 @@
 <template>
    
         
-
+  <div class="max-w-4xl mx-auto bg-white p-6 border-2 border-green-400">
         <div class="flex h-full">
             <div class="w-1/2 border-r border-gray-400">
               <div class="p-8">
@@ -209,7 +209,7 @@
                     
                   </div>
                   </div>
-                  
+                  </div>
                     
         
             
