@@ -6,9 +6,9 @@
             <div class="w-1/2 border-r border-gray-400">
               <div class="p-8">
                 <h2 class="text-xl font-bold mb-4">Markės</h2>
-                <select class="block w-full py-2 px-3 border border-gray-400 mb-4" v-model="selection">
+                <select class="block w-full py-2 px-3 border border-gray-400 mb-4" @change="getModels">
                   <option>Select an option</option>
-                  <option v-for="brand in $store.getters.getBrand" :key="brand.id" :value="brand.id">{{ brand.title }}</option>
+                  <option v-for="brand in  this.$store.getters.getBrand" :key="brand.id" :selected="brand.id == this.selected" :value="brand.id">{{ brand.title }}</option>
                 </select>
                 <h2 class="text-xl font-bold mb-4">Kaina</h2>
                 <div class="flex mb-4">
@@ -90,8 +90,7 @@
               <div class="p-8">
                 <h2 class="text-xl font-bold mb-4">Modelis</h2>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4">
-                  <option>Select an option</option>
-                  <option v-for="model in $store.getters.getModel" :key="model.id">{{ model.model }}</option>
+                  <option v-for="model in this.$store.getters.getModel" :key="model.id">{{ model.model }}</option>
                   
                 </select>
                 <h2 class="text-xl font-bold mb-4">Metai</h2>
@@ -228,28 +227,29 @@ export default {
         brands: Array,
         models: Array,
     },
-    watch: {
+   methods: {
+    getModels(event){
+      router.get(`/models/${event.target.value}`)
+      this.selected = event.target.value;
+          console.log('kaušas');
+    }
+   },
+   watch: {
       models:{
-        handler(newVal,oldVal){
-          this.$store.commit('setModel', newVal);
-        }
+        // handler(newVal, oldVal){
+          // this.$store.commit('setModel', this.models),
+          // console.log('kaušas bet ne kaušas');
+        // }
       },
-      selection:{
-        handler(newVal, oldVal){
-          router.get(`/models/${newVal}`)
-        }
-      }
-    },
+   },
+   created(){
+    this.$store.commit('setModel', this.models),
+    console.log('kurwa šauk nx');
+   },
     data(){
       return{
-        carBrands: [],
-        selection: '',
-        carModels: [],
-      
+        selected: '',
       }
-    },
-    mounted(){
-      this.$store.commit('setBrand', this.brands)
     },
 };
 </script>

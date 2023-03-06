@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue'
-import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
+import { createInertiaApp, Link,} from '@inertiajs/vue3'
 import Layout from "./Shared/Layout.vue";
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { Ziggy } from './ziggy';
@@ -15,9 +15,11 @@ const store = createStore({
   mutations: {
       setBrand(state, payload){
           state.brands = payload
+          console.log('brand ' + payload)
       },
       setModel(state, payload){
           state.models = payload
+          console.log('model ' + payload)
       }
   },
   getters: {

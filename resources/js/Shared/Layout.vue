@@ -20,5 +20,9 @@ import Nav from "./Nav.vue";
 export default {
     components: { Nav },
 
+    created(){
+        this.$store.commit('setBrand', this.$page.props.brands)
+        console.log("Layout create");
+    },
 };
 </script>
