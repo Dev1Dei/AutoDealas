@@ -3,6 +3,33 @@ import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
 import Layout from "./Shared/Layout.vue";
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { Ziggy } from './ziggy';
+import { createStore } from 'vuex';
+
+const store = createStore({
+  state() {
+    return{
+      models: [],
+      brands: [],
+    }
+  },
+  mutations: {
+      setBrand(state, payload){
+          state.brands = payload
+      },
+      setModel(state, payload){
+          state.models = payload
+      }
+  },
+  getters: {
+      getBrand(state){
+          return state.brands
+      },
+      getModel(state){
+          return state.models
+      }
+  },
+  
+});
 
 createInertiaApp({
   progress: {
@@ -15,10 +42,12 @@ createInertiaApp({
   },
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
+      .use(store)
       .use(plugin)
       .use(ZiggyVue, Ziggy)
       .component("Link", Link)
       .component("Layout", Layout)
       .mount(el)
   },
+
 });

@@ -8,7 +8,7 @@
                 <h2 class="text-xl font-bold mb-4">Markės</h2>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4" v-model="selection">
                   <option>Select an option</option>
-                  <option v-for="brand in carBrands" :key="brand.id" :value="brand.id">{{ brand.title }}</option>
+                  <option v-for="brand in $store.getters.getBrand" :key="brand.id" :value="brand.id">{{ brand.title }}</option>
                 </select>
                 <h2 class="text-xl font-bold mb-4">Kaina</h2>
                 <div class="flex mb-4">
@@ -91,7 +91,7 @@
                 <h2 class="text-xl font-bold mb-4">Modelis</h2>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4">
                   <option>Select an option</option>
-                  <option v-for="model in models" :key="model.id">{{ model.model }}</option>
+                  <option v-for="model in $store.getters.getModel" :key="model.id">{{ model.model }}</option>
                   
                 </select>
                 <h2 class="text-xl font-bold mb-4">Metai</h2>
@@ -221,16 +221,17 @@
 <script>
 import { router } from "@inertiajs/vue3";
 import Layout from "../Shared/Layout.vue";
+
 export default {
     layout: Layout,    
     props: {
-        brands: String,
+        brands: Array,
         models: Array,
     },
     watch: {
       models:{
         handler(newVal,oldVal){
-          this.carBrands = newVal;
+          this.$store.commit('setModel', newVal);
         }
       },
       selection:{
@@ -247,8 +248,8 @@ export default {
       
       }
     },
-    created(){
-      this.carBrands = this.brands;
+    mounted(){
+      this.$store.commit('setBrand', this.brands)
     },
 };
 </script>
