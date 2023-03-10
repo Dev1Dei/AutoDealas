@@ -17,14 +17,23 @@ export default {
   props: {
     brands: String,
     listings: Array,
+    results: Array,
   },
   components: {
     CarListing,
   },
+  watch:{
+    results:{
+      handler(newVal, oldVal){
+      this.$store.commit('setListings', this.listings);
+      // console.log('kaušas bet ne kaušas');
+       }
+    },
+  },
   computed: {
     link() {
-
+        
     }
   },
-};
+}
 </script>

@@ -5,6 +5,7 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { Ziggy } from './ziggy';
 import { createStore } from 'vuex';
 
+
 const store = createStore({
   state() {
     return{

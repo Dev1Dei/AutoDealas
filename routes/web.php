@@ -8,7 +8,11 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
 use App\Models\Brand;
 use App\Models\CarModel;
+use Inertia\Inertia;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\NewListingController;
+use App\Http\Controllers\SearchController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,14 +29,13 @@ Route::resource('/', FrontPageController::class);
 Route::resource('/models', ModelController::class);
 
 Route::get('/listings', [ListingController::class, 'index']);
+Route::get('/listings/search', [ListingController::class, 'search']);
 Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listings.show');
-
 Route::get('/prisijungti', function () {
     return inertia('Prisijungti');
 });
-Route::get('/newlisting', function () {
-    return inertia('NewListing');
-});
+
+Route::resource('/newlisting', NewListingController::class);
 Route::post('/logout', function () {
     dd('logout');
 });

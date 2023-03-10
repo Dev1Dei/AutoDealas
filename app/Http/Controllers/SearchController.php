@@ -5,20 +5,9 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Models\Listing;
 
-class ListingController extends Controller
-{
-    public function index()
-{
-    $listings = Listing::select('id','title','Type','model','year','engine','fuelType','transmition','city','price')->get();
-    return Inertia::render('Listings', ['listings' => $listings]);
-
-}
-    public function show($id){
-        $listing = Listing::findOrFail($id);
-        return Inertia::render('Listing', ['listing' => $listing]);
-    }
-
-    public function search(Request $request)
+class SearchController extends Controller
+{   
+    public function index(Request $request)
     {
         $query = Listing::query();
         
@@ -58,8 +47,8 @@ class ListingController extends Controller
                 });
         });
         
-        $results = $query->get();
+        $listings = $query->get();
         
-        return Inertia::render('Listings', ['searchResults' => $results]);
+        return Inertia::render('Listings' []);
     }
-}
+}    
