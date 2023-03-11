@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\FrontPageController;
+use App\Http\Controllers\ListingModelController;
 use App\Http\Controllers\ModelController;
 use illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,8 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\NewListingController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ListModelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +39,8 @@ Route::get('/prisijungti', function () {
 });
 
 Route::resource('/newlisting', NewListingController::class);
+Route::resource('newlisting/models', ListModelController::class);
+
 Route::post('/logout', function () {
     dd('logout');
 });

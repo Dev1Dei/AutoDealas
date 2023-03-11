@@ -13,10 +13,4 @@ class NewListingController extends Controller
         return Inertia::render('NewListing', ['brands' => $brands]);
     }
 
-    public function show($id)
-    {
-        $brand = Brand::find($id);
-        $models = $brand->carModels()->get();
-        return Inertia::render('NewListing', ['models' => $models]);
-    }
 }
