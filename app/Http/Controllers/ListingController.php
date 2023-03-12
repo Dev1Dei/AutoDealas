@@ -9,7 +9,7 @@ class ListingController extends Controller
 {
     public function index()
 {
-    $listings = Listing::select('id','title','Type','model','year','engine','fuelType','transmition','city','price')->get();
+    $listings = Listing::select('id','title','Type','year','engine','fuelType','transmition','city','price','make','model')->get();
     return Inertia::render('Listings', ['listings' => $listings]);
 
 }

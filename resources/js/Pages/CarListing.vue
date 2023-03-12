@@ -7,7 +7,7 @@
           </div>
         </div>
         <div class="description">
-          <h2 class="item-title pb-3"><Link :href="link" class="font-bold text-xl text-green-500">{{ title }}</Link></h2>
+          <h2 class="item-title pb-3"><Link :href="link" class="font-bold text-xl text-green-500">{{ make }} {{ model }}</Link></h2>
           <div class="item-description">
             <div class="primary pb-2">
               {{ engine }},
@@ -43,6 +43,8 @@ props: {
     price: String,
     id: Number,
     title: String,
+    make: String,
+    model: String,
 },
 computed: {
     link(){

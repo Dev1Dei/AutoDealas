@@ -20,7 +20,7 @@ class ListingFactory extends Factory
             'title' => $this->faker->sentence(),
             'tags' => 'great, nice awesome',
             'Type' => $this->faker->sentence(),
-            'tags' => 'gay, awesome',
+            'tags' => 'awesome',
             'make' => $this->faker->sentence(),
             'model' => $this->faker->sentence(),
             'engine' => $this->faker->sentence(), //'1.8 l. 90KW (122 Ag)',

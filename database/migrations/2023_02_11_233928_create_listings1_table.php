@@ -36,9 +36,9 @@ return new class extends Migration
             $table->string('country');
             $table->string('TPass');
             $table->string('traits');
-            $table->longText("description");
+            $table->longText('description');
             $table->string('sellerNumber');
-            
+            $table->string('photo', 300);
             $table->timestamps();
         });
     }

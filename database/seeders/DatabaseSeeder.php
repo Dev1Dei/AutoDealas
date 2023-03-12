@@ -12622,59 +12622,6 @@ CarModel::create([
 
      \App\Models\User::factory(6) -> create();
        
-        
-       Listing::create([
-            'Type' => 'Automobilis',
-            'title' => 'Audi A4 B6',
-            'tags' => 'Cool',
-            'model' => 'A4',
-            'make' => 'Audi',
-            'year' => '2002',
-            'engine' => '2.0l',
-            'fuelType' => 'Benzinas',
-            'color' => 'Dark Blue',
-            'transmition' => 'Manual',
-            'FWD/AWD/RWD' => 'FWD',
-            'defects' => '-',
-            'wheelLocation' => 'LHD',
-            'numberOfDoors' => '4',
-            'numberOfSeats' => '5',
-            'VIN' => 'VIN',
-            'price' => '2000',
-            'city' => 'Kretinga',
-            'country' => 'Lithuania',
-            'TPass' => 'TPass',
-            'traits' => 'Cool',
-            'description' => 'Puikus automobilis',
-            'sellerNumber' => '+3706797660
-            2',
-        ]);
-        Listing::create([
-            'Type' => 'Automobilis',
-            'title' => 'Audi A4 B6',
-            'tags' => 'Cool',
-            'model' => 'A4',
-            'make' => 'Audi',
-            'year' => '2002',
-            'engine' => '2.0l',
-            'fuelType' => 'Benzinas',
-            'color' => 'Dark Blue',
-            'transmition' => 'Manual',
-            'FWD/AWD/RWD' => 'FWD',
-            'defects' => '-',
-            'wheelLocation' => 'LHD',
-            'numberOfDoors' => '4',
-            'numberOfSeats' => '5',
-            'VIN' => 'VIN',
-            'price' => '2000',
-            'city' => 'Kretinga',
-            'country' => 'Lithuania',
-            'TPass' => 'TPass',
-            'traits' => 'Cool',
-            'description' => 'Puikus automobilis',
-            'sellerNumber' => '+3706797660
-            2',
-        ]);
         Brand::create([
             'title' => 'Aixam',
             'records' => '0'

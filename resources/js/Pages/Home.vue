@@ -258,7 +258,7 @@ export default {
       console.log(event.target.value);
     },
     search() {
-
+      
     },
   },
   watch: {

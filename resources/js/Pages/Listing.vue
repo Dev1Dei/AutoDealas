@@ -6,7 +6,7 @@
                 <img src="https://via.placeholder.com/500x300" alt="Car Image" class="h-full w-full object-cover lg:h-auto lg:w-full">
             </div>
             <div class="w-full md:w-1/2 lg:w-2/5 mb-4 lg:ml-6 p-6" >
-                <h2 class="text-3xl font-bold mb-4">{{ listing.title }}</h2>
+                <h2 class="text-3xl font-bold mb-4">{{ listing.make }} {{ listing.model }}</h2>
                 <ul class="list-none text-lg">
                     <li class="mb-2"><span class="font-bold text-gray-700">Markė: </span> {{ listing.make }}</li>
                     <li class="mb-2"><span class="font-bold text-gray-700">Modelis: </span> {{ listing.model }}</li>
