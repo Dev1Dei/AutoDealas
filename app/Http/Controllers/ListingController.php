@@ -59,7 +59,7 @@ class ListingController extends Controller
         });
         
         $results = $query->get();
-        
+        dd($results);
         return Inertia::render('Listings', ['searchResults' => $results]);
     }
 }

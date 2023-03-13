@@ -12,12 +12,13 @@
 <script>
 import CarListing from "./CarListing.vue";
 import Layout from "../Shared/Layout.vue";
+
 export default {
   layout: Layout,
   props: {
     brands: String,
     listings: Array,
-    results: Array,
+    searchResults: Array,
   },
   components: {
     CarListing,

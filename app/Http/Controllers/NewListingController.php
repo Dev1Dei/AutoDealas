@@ -16,11 +16,7 @@ class NewListingController extends Controller
 
     public function store(Request $request)
     {
-        $requestData = $request->all();
-        $fileName = time().$request->file('photo')->getClientOriginalName();
-        $path = $request->file('photo')->storeAs('images', $fileName, 'public');
-        $requestData["photo"] = '/storage/'.$path;
-        Listing::create($requestData);
-        return Inertia::render('Listings')->with('flash_message', 'Skelbimas sėkmingai patalpintas');
+        
+      
     }
 }

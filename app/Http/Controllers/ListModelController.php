@@ -10,7 +10,7 @@ class ListModelController extends Controller
     public function show($id)
     {
         $brand = Brand::find($id);
-        $models = $brand->carModels()->get();
+        $models = $brand->carModels;
         return Inertia::render('NewListing', ['models' => $models]);
     }
 }

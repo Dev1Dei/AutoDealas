@@ -6,7 +6,7 @@
         <div class="p-8">
           <h2 class="text-xl font-bold mb-4">Markės</h2>
           <select class="block w-full py-2 px-3 border border-gray-400 mb-4" @change="getModels">
-            <option>Select an option</option>
+            <option disabled selected>Pasirinkite markę</option>
             <option v-for="brand in  this.$store.getters.getBrand" :key="brand.id" :selected="brand.id == this.selected"
               :value="brand.id" >{{ brand.title }}</option>
           </select>
@@ -104,7 +104,8 @@
         <div class="p-8">
           <h2 class="text-xl font-bold mb-4">Modelis</h2>
           <select class="block w-full py-2 px-3 border border-gray-400 mb-4">
-            <option v-for="model in this.$store.getters.getModel" :key="model.id">{{ model.model }}</option>
+            <option disabled>Pasirinkite modelį</option>
+            <option v-for="model in this.modeliai" :key="model.id">{{ model.model }}</option>
 
           </select>
           <h2 class="text-xl font-bold mb-4">Metai</h2>
@@ -254,24 +255,26 @@ export default {
   methods: {
     getModels(event) {
       this.selected = event.target.value;
-      router.get(`/models/${event.target.value}`)
+      router.visit(`/models/${event.target.value}`, {preserveState:true})
       console.log(event.target.value);
     },
     search() {
-      
+
     },
   },
-  watch: {
-    models: {
-      // handler(newVal, oldVal){
-      // this.$store.commit('setModel', this.models),
-      // console.log('kaušas bet ne kaušas');
-      // }
+  // watch: {
+  //   models: {
+  //    handler(newVal, oldVal){
+  //     this.$store.commit('setModel', newVal),
+  //     console.log('kaušas bet ne kaušas');
+  //     },
+  //     deep:true,
+  //   },
+  // },
+  computed:{
+    modeliai(){
+      return this.$page.props.models;
     },
-  },
-  created() {
-    this.$store.commit('setModel', this.models),
-      console.log('setModel');
   },
   data() {
     return {

@@ -48,7 +48,7 @@ class ModelController extends Controller
     public function show($id)
     {
         $brand = Brand::find($id);
-        $models = $brand->carModels()->get();
+        $models = $brand->carModels;
         return Inertia::render('Home', ['models' => $models]);
     }
 
