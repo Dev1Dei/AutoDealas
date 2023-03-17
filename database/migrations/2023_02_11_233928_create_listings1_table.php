@@ -33,6 +33,8 @@ return new class extends Migration
             $table->string('numberOfDoors');
             $table->string('numberOfSeats');
             $table->string('VIN');
+            $table->integer('kW');
+            $table->integer('HP');
             $table->double('price');
             $table->string('city');
             $table->string('country');

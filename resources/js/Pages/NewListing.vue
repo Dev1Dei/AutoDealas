@@ -11,19 +11,20 @@
                 <h3 class="text-xl mb-4">Pasirinkite markę</h3>
 
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4" for="make" id="make" name="make" @change="getModels" v-model="form.make">
-                    <option>-------</option>
+                    <option default value disabled>-------</option>
                     <option v-for="brand in  this.$store.getters.getBrand" :key="brand.id"
                         :selected="brand.id == this.selected" :value="brand.id">{{ brand.title }}</option>
                 </select>
 
                 <h3 class="text-xl mb-3 mt-6">Pasirinkite modelį</h3>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4" for="model" id="model" name="model" v-model="form.model">
-                    <option>-------</option>
+                    <option default value disabled>-------</option>
                     <option v-for="model in this.modeliai" :key="model.id">{{ model.model }}</option>
                 </select>
 
                 <h3 class="text-xl mb-3 mt-6">Pasirinkite metus</h3>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-6" for="Year" id="Year" name="Year" v-model="form.year">
+                    <option default value disabled>-------</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
@@ -73,8 +74,11 @@
                     <option value="1925">1925</option>
                 </select>
 
-                <label class="text-xl mb-3 mt-6" for="engine">Įrašykite varilio tūrį ( Pvz: 1.8l )</label>
-                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" name="engine" id="engine" required v-model="form.engine">
+                <label class="text-xl mb-3 mt-6" for="engine">Įrašykite varilio tūrį</label>
+                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" placeholder="Pvz: 1.8l" name="engine" id="engine" required v-model="form.engine">
+                
+                <label class="text-xl mb-3 mt-6" for="kW">Įrašykite varilio galią, kW</label>
+                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="number" placeholder="-------" name="kW" id="kW" required v-model="form.kW">
 
                 <h3 class="text-xl mb-3">Pasirinkite kuro tipą</h3>
                 <div class="flex">
@@ -122,7 +126,7 @@
 
                 <h3 class="text-xl mb-3 mt-6">Pasirinkite spalvą</h3>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-4" for="color" id="color" name="color" v-model="form.color">
-                    <option default>-------</option>
+                    <option value default disabled>-------</option>
                     <option value="raudona">Raudona</option>
                     <option value="geltona">Geltona</option>
                     <option value="žalia">Žalia</option>
@@ -156,45 +160,45 @@
 
                 <h3 class="text-xl mb-3 mt-6">Varantieji ratai</h3>
                 <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
-                    <input v-model="form.drive"
+                    <input v-model="form.wheelDrive"
                         class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 dark:border-neutral-600 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:content-[''] checked:border-green-700 dark:checked:border-green-700 checked:bg-green-500 dark:checked:bg-green-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
                         type="checkbox" id="fwd" name="FWD/AWD/RWD" value="fwd" />
                     <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="FWD/AWD/RWD">Priekiu varomieji</label>
                 </div>
 
                 <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
-                    <input v-model="form.drive"
+                    <input v-model="form.wheelDrive"
                         class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 dark:border-neutral-600 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:content-[''] checked:border-green-700 dark:checked:border-green-700 checked:bg-green-500 dark:checked:bg-green-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
                         type="checkbox" id="rwd" name="FWD/AWD/RWD" value="rwd" />
                     <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="FWD/AWD/RWD">Galu varomieji</label>
                 </div>
 
                 <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
-                    <input v-model="form.drive"
+                    <input v-model="form.wheelDrive"
                         class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 dark:border-neutral-600 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:content-[''] checked:border-green-700 dark:checked:border-green-700 checked:bg-green-500 dark:checked:bg-green-500 checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
                         type="checkbox" id="awd" name="FWD/AWD/RWD" value="awd" />
                     <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="FWD/AWD/RWD">Visi varomieji</label>
                 </div>
             </div>
 
-            <h3 class="text-xl mb-3 mt-6">Durų skaičius</h3>
-                <select class="block w-full py-2 px-3 border border-gray-400 mb-4" for="numberOfDoors" id="numberOfSeats" v-model="form.numberOfDoors">
-                    <option default>-------</option>
-                    <option>2</option>
-                    <option>4</option>
-                    <option>6</option>
+            <h3 class="text-xl mb-3 mt-6">Durų skaičius <a class="text-xs text-gray-500"> (Atsinaujina automatiškai)</a></h3>
+                <select class="block w-full py-2 px-3 border border-gray-400 mb-4" for="numberOfDoors" id="numberOfDoors" v-model="form.numberOfDoors">
+                    <option value default disabled>-------</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
                 </select>
             
-                <h3 class="text-xl mb-3 mt-6">Sėdimų vietų skaičius</h3>
+                <h3 class="text-xl mb-3 mt-6">Sėdimų vietų skaičius <a class="text-xs text-gray-500"> (Atsinaujina automatiškai)</a></h3>
                 <select class="block w-full py-2 px-3 border border-gray-400 mb-6" for="numberOfSeats" id="numberOfSeats" v-model="form.numberOfSeats">
-                    <option default>-------</option>
-                    <option>3</option>
-                    <option>5</option>
-                    <option>7</option>
+                    <option value default disabled>-------</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
                 </select>
                 
-                <label class="text-xl mb-6 mt-6" for="price">Įrašykite kainą € ( Pvz: 2500 )</label>
-                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="number" name="price" id="price" for="price" required v-model="form.price">
+                <label class="text-xl mb-6 mt-6" for="price">Įrašykite kainą €</label>
+                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="number" placeholder="Pvz: 2000" name="price" id="price" for="price" required v-model="form.price">
                 
                 <label class="text-xl mb-3 mt-6" for="description">Aprašymas</label>
                 <textarea class="border border-gray-400 mb-4 w-full py-2 px-3 h-64" type="LongText" for="descsription" name="description" id="description" v-model="form.description"> </textarea>
@@ -268,12 +272,37 @@ export default {
       return this.$page.props.models;
     },
   },
+    watch:{
+        'form.numberOfDoors'(val) {
+      if (val === '2') {
+        this.form.numberOfSeats = '3';
+      }
+      if (val === '4') {
+        this.form.numberOfSeats = '5';
+      }
+      if (val === '6') {
+        this.form.numberOfSeats = '7';
+      }
+      
+    },
+    'form.numberOfSeats'(val) {
+      if (val === '3') {
+        this.form.numberOfDoors = '2';
+      }
+      if (val === '5') {
+        this.form.numberOfDoors = '4';
+      }
+      if (val === '7') {
+        this.form.numberOfDoors = '6';
+      }
+    }
+    },
   data() {
     return {
       selected: '',
       form: reactive({
-        model:'', make:'', year:'', engine:'', fuelType:'', color:'', transmition:'', drive:'', numberOfDoors:'', numberOfSeats:'', body:'', price:'', city:'',
-         country:'', sellerNumber:'', description:'', photo:'',
+        model:'', make:'', year:'', engine:'', fuelType:[], color:'', transmition:[], wheelDrive:[], numberOfDoors:'', numberOfSeats:'', body:[], price:'', city:'',
+         country:'', sellerNumber:'', description:'', photo:'', kW:'',
       })
     }
   },

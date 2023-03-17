@@ -6,14 +6,14 @@
         <div class="p-8">
           <h2 class="text-xl font-bold mb-4">Markės</h2>
           <select class="block w-full py-2 px-3 border border-gray-400 mb-4" @change="getModels" v-model="form.marke">
-            <option disabled selected>Pasirinkite markę</option>
+            <option value default disabled>Pasirinkite markę</option>
             <option v-for="brand in  this.$store.getters.getBrand" :key="brand.id" :selected="brand.id == this.selected"
               :value="brand.id" >{{ brand.title }}</option>
           </select>
           <h2 class="text-xl font-bold mb-4">Kaina</h2>
           <div class="flex mb-4">
             <select class="block w-1/2 py-2 px-3 border border-gray-400 mr-2" v-model="form.minPrice">
-              <option value default>Nuo</option>
+              <option value default disabled>Nuo</option>
               <option value="150">150</option>
               <option value="300">300</option>
               <option value="500">500</option>
@@ -45,7 +45,7 @@
               <option value="100000">100000</option>
             </select>
             <select class="block w-1/2 py-2 px-3 border border-gray-400" v-model="form.maxPrice">
-              <option value default>Iki</option>
+              <option value default disabled>Iki</option>
               <option value="150">150</option>
               <option value="300">300</option>
               <option value="500">500</option>
@@ -104,7 +104,7 @@
         <div class="p-8">
           <h2 class="text-xl font-bold mb-4">Modelis</h2>
           <select class="block w-full py-2 px-3 border border-gray-400 mb-4" v-model="form.modelis" >
-            <option disabled>Pasirinkite modelį</option>
+            <option value default disabled>Pasirinkite modelį</option>
             <option v-for="model in this.modeliai" :key="model.id" :value="model.id">{{ model.model }}</option>
 
           </select>
@@ -260,7 +260,6 @@ export default {
       console.log(event.target.value);
     },
     search() {
-      // this.$inertia.('/listings/search', this.filters)
       router.post('/listings/search', this.form)
     },
   },
