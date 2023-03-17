@@ -20,12 +20,14 @@ return new class extends Migration
             $table->string('tags');
             $table->string('model');
             $table->string('make');
+            $table->integer('car_model_id');
+            $table->integer('brand_id');
             $table->year('year');
             $table->string('engine');
             $table->string('fuelType');
             $table->string('color');
             $table->string('transmition');
-            $table->string('FWD/AWD/RWD');
+            $table->string('wheelDrive');
             $table->string('defects');
             $table->string('wheelLocation');
             $table->string('numberOfDoors');
