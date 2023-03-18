@@ -41,6 +41,7 @@ Route::get('/prisijungti', function () {
 
 Route::resource('/newlisting', NewListingController::class);
 Route::resource('newlisting/models', ListModelController::class);
+Route::post('/listings', [NewListingController::class, 'create']);
 
 Route::post('/logout', function () {
     dd('logout');

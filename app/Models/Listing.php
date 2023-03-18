@@ -10,6 +10,29 @@ class Listing extends Model
     use HasFactory;
     protected $table = 'listings';
     protected $primaryKey = 'id';
-    protected $fillable = ['model' , 'make', 'year','kW', 'engine', 'fuelType', 'color', 'transmition', 'wheelDrive', 'numberOfDoors', 'numberOfSeats','body', 'price', 'city', 'country',
-                            'sellerNumber', 'description'];
+    protected $fillable = [
+        'model',
+        'car_model_id',
+        'brand_id',
+        'make',
+        'photo', 
+        'year', 
+        'kW', 
+        'HP', 
+        'engine', 
+        'fuelType', 
+        'color', 
+        'transmition', 
+        'wheelDrive',
+        'wheelLocation', 
+        'numberOfDoors', 
+        'numberOfSeats', 
+        'body', 
+        'price', 
+        'city', 
+        'country',
+        'sellerNumber', 
+        'title', 
+        'description'
+    ];
 }
