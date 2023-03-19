@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
+use App\Models\CarModel;
 use Inertia\Inertia;
 use App\Models\Listing;
 class NewListingController extends Controller
@@ -20,6 +21,8 @@ class NewListingController extends Controller
       
     }
     public function create(Request $request){
+      $brand = Brand::findOrFail($request->input('brand_id'));
+      $carModel = CarModel::where('model', $request->input('model'))->firstOrFail();
 
         if (is_array($request->input('fuelType'))) {
             $fuelType = implode(',', $request->input('fuelType'));
@@ -85,7 +88,9 @@ class NewListingController extends Controller
         Listing::create([
             'title' => $request->input('title'),
             'model' => $request->input('model'),
+            'make' => $brand->title,
             'brand_id' => $request->input('brand_id'),
+            'car_model_id' => $carModel->id,
             'year' => $request->input('year'),
             'engine' => $request->input('engine'),
             'fuelType' => $fuelType,
