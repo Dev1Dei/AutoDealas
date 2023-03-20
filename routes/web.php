@@ -38,7 +38,9 @@ Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listings
 Route::get('/prisijungti', function () {
     return inertia('Prisijungti');
 });
-
+Route::get('/register', function () {
+    return inertia('Registruotis');
+});
 Route::resource('/newlisting', NewListingController::class);
 Route::resource('newlisting/models', ListModelController::class);
 Route::post('/listings', [NewListingController::class, 'create']);
