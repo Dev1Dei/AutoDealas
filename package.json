@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@inertiajs/vue3": "^1.0.2",
+        "laravel-vue-pagination": "^4.0.0",
         "nprogress": "^0.2.0",
         "tw-elements": "^1.0.0-beta1",
         "vue": "^3.2.36",

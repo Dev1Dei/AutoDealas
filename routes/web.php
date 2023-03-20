@@ -31,7 +31,7 @@ use App\Http\Controllers\ListModelController;
 Route::resource('/', FrontPageController::class);
 Route::resource('/models', ModelController::class);
 
-
+Route::get('/listings/sort-by-price-asc', [ListingController::class, 'sortByPriceAsc'])->name('listings.sortByPriceAsc');
 Route::get('/listings', [ListingController::class, 'index']);
 Route::post('/listings/search', [ListingController::class, 'search']);
 Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listings.show');

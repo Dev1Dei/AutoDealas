@@ -10,9 +10,11 @@ class ListingController extends Controller
     public function index()
 {
     $listings = Listing::select('id','title','Type','year','engine','fuelType','transmition','city','price','make','model')->get();
-    return Inertia::render('Listings', ['listings' => $listings]);
+    return Inertia::render('Listings', ['listings' => $listings ]);
 
 }
+
+
     public function show($id){
         $listing = Listing::findOrFail($id);
         return Inertia::render('Listing', ['listing' => $listing]);
@@ -51,12 +53,23 @@ class ListingController extends Controller
                 $query->where('price', '<=', $request->input('maxPrice'));
             });
     });
+
+    if ($request->has('sortBy') && $request->input('sortBy') == 'price_asc') {
+        $query->orderBy('price', 'asc');
+    }
     //dd($query -> toSql());
     $listings = $query->get();
 
 
     return Inertia::render('Listings', ['searchResults' => $listings]);
         }
+
+    public function sortByPriceAsc(Request $request)
+{
+    $listings = Listing::orderBy('price')->get();
+
+    return Inertia::render('Listings', ['listings' => $listings]);
+}
     }
 
 //     public function search(Request $request)

@@ -4,7 +4,7 @@ import Layout from "./Shared/Layout.vue";
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { Ziggy } from './ziggy';
 import { createStore } from 'vuex';
-
+import { TailwindPagination } from 'laravel-vue-pagination';
 
 const store = createStore({
   state() {
