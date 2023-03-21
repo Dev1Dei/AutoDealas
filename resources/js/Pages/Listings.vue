@@ -3,7 +3,7 @@
   <h1 class="text-2xl pb-6">Visi skelbimai</h1>
   <div class="flex justify-center mb-6">
     <button :class="{ 'border-green-400': sortBy === 'make' }" class="px-4 py-2 mr-4 border rounded hover:bg-green-200 hover:text-green-800 focus:outline-none" @click="sortListings('make')">
-      <span :class="{ 'opacity-50': sortBy !== 'make' }">Sort by Make</span>
+      <span :class="{ 'opacity-50': sortBy !== 'make' }">Rūšiuoti pagal markę</span>
       <span v-if="sortBy === 'make'" class="text-green-400">
         <svg class="w-6 h-6 inline-block" viewBox="0 0 24 24">
           <path v-if="sortOrder === 1" fill="currentColor" d="M5 8l5 5 5-5z" />
@@ -12,7 +12,7 @@
       </span>
     </button>
     <button :class="{ 'border-green-400': sortBy === 'model' }" class="px-4 py-2 mr-4 border rounded hover:bg-green-200 hover:text-green-800 focus:outline-none" @click="sortListings('model')">
-      <span :class="{ 'opacity-50': sortBy !== 'model' }">Sort by Model</span>
+      <span :class="{ 'opacity-50': sortBy !== 'model' }">Rūšiuoti pagal modelį</span>
       <span v-if="sortBy === 'model'" class="text-green-400">
         <svg class="w-6 h-6 inline-block" viewBox="0 0 24 24">
           <path v-if="sortOrder === 1" fill="currentColor" d="M5 8l5 5 5-5z" />
@@ -21,7 +21,7 @@
       </span>
     </button>
     <button :class="{ 'border-green-400': sortBy === 'price' }" class="px-4 py-2 mr-4 border rounded hover:bg-green-200 hover:text-green-800 focus:outline-none" @click="sortListings('price')">
-      <span :class="{ 'opacity-50': sortBy !== 'price' }">Sort by Price</span>
+      <span :class="{ 'opacity-50': sortBy !== 'price' }">Rūšiuoti pagal kainą</span>
       <span v-if="sortBy === 'price'" class="text-green-400">
         <svg class="w-6 h-6 inline-block" viewBox="0 0 24 24">
           <path v-if="sortOrder === 1" fill="currentColor" d="M5 8l5 5 5-5z" />
