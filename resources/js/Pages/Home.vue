@@ -246,12 +246,14 @@
 import { router } from "@inertiajs/vue3";
 import Layout from "../Shared/Layout.vue";
 import { reactive } from "vue";
+import { mapState } from "vuex";
 
 export default {
   layout: Layout,
   props: {
     brands: Array,
     models: Array,
+    user: Object,
   },
   methods: {
     getModels(event) {
@@ -276,6 +278,18 @@ export default {
     modeliai(){
       return this.$page.props.models;
     },
+    ...mapState([
+      'pageProps'
+    ]),
+  },
+  watch:{
+    user:{
+      handler(newVal, oldVal){
+        if(!this.$store.getters.getUser){
+        this.$store.commit('setUser', newVal)
+        }
+      }
+    }
   },
   data() {
     return {
@@ -286,5 +300,16 @@ export default {
        })
     }
   },
+  mounted() {
+     //if (!this.$page.props.brands){
+        //  router.visit('/', {preserveState:true})
+     //}
+      
+
+    const { props } = this.$page;
+      this.$store.commit('setProps', props)
+      console.log(props)
+
+  }
 };
 </script>

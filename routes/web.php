@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\NewListingController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ListModelController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -45,11 +46,14 @@ Route::resource('/newlisting', NewListingController::class);
 Route::resource('newlisting/models', ListModelController::class);
 Route::post('/listings', [NewListingController::class, 'create']);
 
-Route::post('/logout', function () {
-    dd('logout');
-});
-
-
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('/', function () {
+//         return inertia('Home');
+//     });
+// });
 
 
 //Pre-Vue

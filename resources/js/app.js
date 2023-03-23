@@ -11,9 +11,19 @@ const store = createStore({
     return{
       models: [],
       brands: [],
+      user: null,
+      pageProps: [],
     }
   },
   mutations: {
+    setUser(state, payload){
+      state.user = payload
+      console.log('user' + payload)
+    },
+    setProps(state, payload){
+      state.pageProps = payload
+      console.log('user' + payload)
+    },
       setBrand(state, payload){
           state.brands = payload
           console.log('brand ' + payload)
@@ -24,6 +34,12 @@ const store = createStore({
       }
   },
   getters: {
+    getUser(state){
+      return state.user
+    },
+    getProps(state){
+      return state.pageProps
+    },
       getBrand(state){
           return state.brands
       },
