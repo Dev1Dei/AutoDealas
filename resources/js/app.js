@@ -37,7 +37,7 @@ const store = createStore({
     getUser(state){
       return state.user
     },
-    getProps(state){
+    getPropz(state){
       return state.pageProps
     },
       getBrand(state){

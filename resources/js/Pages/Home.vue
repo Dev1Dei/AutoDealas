@@ -302,7 +302,7 @@ export default {
   },
   mounted() {
      //if (!this.$page.props.brands){
-        //  router.visit('/', {preserveState:true})
+          router.visit('/', {preserveState:true})
      //}
       
 

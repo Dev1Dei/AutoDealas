@@ -10,6 +10,9 @@
             <div class="border-solid border-gray-500 border-l p-2">
                 <li><Link href="/newlisting" class=" pl-4 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'NewListing'}">Pridėti skelbimą</Link></li>
             </div>
+             <!-- <div class="border-solid border-gray-500 border-l p-2">
+                <li><a class=" pl-4 text-black text-xl hover:text-gray-700">{{ this.$store.getters.getPropz.user.name }}</a></li>
+            </div>  -->
         </ul>
     </nav>
 </template>

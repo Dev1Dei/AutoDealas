@@ -98,12 +98,10 @@ class LoginController extends Controller
  
         
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::login($credentials)) {
             $request->session()->regenerate();
-            $brands = Brand::all();
-            return Inertia::render('Home', ['user' => Auth::user(), 'brands' => $brands] );
+            return view('Home', ['user' => Auth::user()] );
         }
-
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
@@ -118,18 +116,12 @@ class LoginController extends Controller
 
         $attributes['password'] = Hash::make($attributes['password']);
 
-        User::create($attributes);
+       $user = User::create($attributes);
 
-        if (Auth::attempt($attributes)) {
-            error_log("registering and logging in");
+       Auth::login($user);
             $request->session()->regenerate();
  
             return redirect()->intended('/prisijungti');
-        }
- 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
     }
     
     public function logout() {
