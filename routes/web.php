@@ -17,7 +17,7 @@ use App\Http\Controllers\ListModelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutMeController;
-
+use App\Http\Controllers\MyListingsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,8 +50,11 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    Route::put('/listings/{id}', [ListingController::class, 'update'])->name('listings.update');
+    Route::get('/listings/edit/{id}', [ListingController::class, 'edit'])->name('listings.edit');
+    Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->name('listings.destroy');
     Route::get('/aboutme/{id}', [AboutMeController::class, 'index'])->name('aboutme');
-
+    Route::get('/my-listings', [MyListingsController::class, 'index'])->name('my-listings');
     Route::put('/aboutme/{id}/update', [UserController::class, 'update'])->name('user.update');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::resource('/newlisting', NewListingController::class);

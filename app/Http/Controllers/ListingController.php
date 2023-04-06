@@ -4,40 +4,16 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Models\Listing;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
+
 
 class ListingController extends Controller
 {
     public function index()
 {
-    $listings = Listing::select('id','title','Type','year','engine','fuelType','transmition','city','price','make','model')->get();
+    $listings = Listing::select('id','title','Type','year','photo', 'engine','fuelType','transmition','city','miles','price','make','model')->get();
     return Inertia::render('Listings', ['listings' => $listings ]);
 
-}
-public function edit($id)
-{
-    $listing = Listing::find($id);
-    return Inertia::render('Listings/Edit', ['listing' => $listing]);
-}
-public function dashboard()
-{
-    // Fetch listings for the authenticated user
-    $user = auth()->user();
-    $listings = Listing::where('user_id', $user->id)->get();
-
-    // Pass the listings to the dashboard view
-    return Inertia::render('Dashboard', ['listings' => $listings]);
-}
-public function update(Request $request, $id)
-{
-    $listing = Listing::find($id);
-    $validated = $request->validate([
-        'price' => 'required|numeric',
-        'description' => 'required',
-    ]);
-
-    $listing->update($validated);
-    return redirect()->route('dashboard')->with('success', 'Listing updated successfully!');
 }
 
     public function show($id){
@@ -94,6 +70,42 @@ public function update(Request $request, $id)
     $listings = Listing::orderBy('price')->get();
 
     return Inertia::render('Listings', ['listings' => $listings]);
+}
+public function edit(Request $request, $id)
+{
+    $listing = Listing::findOrFail($id);
+    return Inertia::render('EditListing', [
+        'listing' => $listing,
+    ]);
+}
+
+public function update(Request $request, $id)
+{
+    $listing = Listing::findOrFail($id);
+
+    $validatedData = $request->validate([
+        'description' => 'required',
+        'price' => 'required|numeric',
+        'miles' => 'required|numeric',
+    ]);
+
+    $listing->update($validatedData);
+
+    return redirect()->route('listings.show', $listing->id);
+}
+
+
+public function destroy(Listing $listing)
+{
+    
+    if (Auth::user()->id !== $listing->user_id) {
+        abort(403, 'Unauthorized action.');
+    }
+
+    $listing->delete();
+    $query = Listing::query();
+    $listings = $query->get();
+    return Inertia::render('Listings', ['listings' => $listings])->with('message', 'Listing deleted successfully.');
 }
     }
 

@@ -18,29 +18,33 @@ class NewListingController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+      $validatedData = $request->validate([
+        'title' => 'required',
+        'make' => 'required',
+        'model' => 'required',
+        'year' => 'required',
+        'fuelType' => 'required',
+        'engine' => 'required',
+        'transmition' => 'required',
+        'city' => 'required',
+        'price' => 'required',
+        'description' => 'required',
+        'photo' => 'nullable|file|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Add this line
+    ]);
     
-        if ($request->hasFile('photo')) {
-            $image = $request->file('photo');
-            $name = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = 'uploads/photos';
     
-            // Create the directory if it doesn't exist
-            if (!File::exists(storage_path('app/public/' . $destinationPath))) {
-                File::makeDirectory(storage_path('app/public/' . $destinationPath), 0755, true);
-            }
-    
-            $image->storeAs($destinationPath, $name, 'public');
-    
-            $validatedData['photo'] = $destinationPath . '/' . $name;
-            dd($validatedData);
-        }
-    
-        Listing::create($validatedData);
-    
-        return redirect('/listings');
+    if ($request->hasFile('photo')) {
+      $photo = $request->file('photo');
+      $filename = time() . '.' . $photo->getClientOriginalExtension();
+      $path = $photo->storeAs('public/uploads/photos', $filename);
+  
+      $validatedData['photo'] = 'uploads/photos/' . $filename;
+  }
+  
+  $listing = Listing::create($validatedData);
+  
+  return redirect('/listings');
+  
     }
     
 
@@ -88,17 +92,18 @@ class NewListingController extends Controller
             'model' => 'required',
             'brand_id' => 'required',
             'year' => 'required',
-            'engine' => 'required',
+            'engine' => ['required'],
             'color' => 'required',
+            'photo' => 'nullable|file|image|mimes:jpeg,png,jpg,gif,svg|max:999999999',
             'fuelType' => 'required',
             'transmition' => 'required',
             'wheelDrive' => 'required',
             'wheelLocation' => 'required',
             'numberOfDoors' => 'required',
-            'numberOfSeats' => 'required',
-            'kW' => 'required',
+            'kW' => ['required', 'numeric'],
+            'miles' => ['required', 'numeric'],
             'Horses' => 'required',
-            'price' => 'required',
+            'price' => ['required', 'numeric'],
             'city' => 'required',
             'country' => 'required',
             'body' => 'required',
@@ -108,13 +113,25 @@ class NewListingController extends Controller
             'name' => 'required',
         
         ]);
-        if ($request->hasFile('photo')) {
+        $photoPath = '';
 
-            $request->validate([
-                'photo' => 'mimes:jpeg,png'
-            ]);
-            $request->file('photo')->store('photos', 'public');
-        }
+       
+        if ($request->hasFile('photo')) {
+          $image = $request->file('photo');
+          $name = time() . '.' . $image->getClientOriginalExtension();
+          $destinationPath = 'uploads/photos';
+  
+          // Create the directory if it doesn't exist
+          if (!File::exists(storage_path('app/public/' . $destinationPath))) {
+              File::makeDirectory(storage_path('app/public/' . $destinationPath), 0755, true);
+          }
+  
+          $image->storeAs($destinationPath, $name, 'public');
+  
+          $photoPath = $destinationPath . '/' . $name;
+         
+      }
+      
         Listing::create([
             'title' => $request->input('title'),
             'model' => $request->input('model'),
@@ -129,7 +146,6 @@ class NewListingController extends Controller
             'wheelDrive' => $wheelDrive,
             'wheelLocation' => $wheelLocation,
             'numberOfDoors' => $request->input('numberOfDoors'),
-            'numberOfSeats' => $request->input('numberOfSeats'),
             'kW' => $request->input('kW'),
             'HP' => $request->input('Horses'),
             'price' => $request->input('price'),
@@ -138,9 +154,10 @@ class NewListingController extends Controller
             'body' => $body,
             'description' => $request->input('description'),
             'sellerNumber' => $request->input('sellerNumber'),
+            'miles' => $request->input('miles'),
             'email' => $request->input('email'),
             'name' => $request->input('name'),
-            'photo' => $request->file('photo'),
+            'photo' => $photoPath,
             'user_id' => $user->id,
           
             

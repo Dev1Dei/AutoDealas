@@ -32,7 +32,8 @@
               <li v-else>
                 <span class="pl-4 md:pl-0 text-black text-xl">{{ user.name }}</span>
                 <div class="dropdown">
-                  <Link :href="`/aboutme/${user.id}`" class="block px-4 py-2 text-black text-xl hover:text-gray-700">About Me</Link>
+                  <Link :href="`/aboutme/${user.id}`" class="block px-4 py-2 text-black text-xl hover:text-gray-700">Apie mane</Link>
+                  <Link href="/my-listings" class="block px-4 py-2 text-black text-xl hover:text-gray-700">Mano Skelbimai</Link>
                   <a href="#" @click.prevent="logout">Log Out</a>
                 </div>
               </li>
