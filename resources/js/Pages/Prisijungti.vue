@@ -48,7 +48,6 @@ export default {
           password: this.form.password,
         })
         try{
-          this.$router.push('/')
         }
         catch (error) { 
           console.log(error);

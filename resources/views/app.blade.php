@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     <meta charset="utf-8" />
     @vite('resources/css/app.css')
     @vite('resources/css/main.css')

@@ -43,7 +43,11 @@ return new class extends Migration
             $table->string('body');
             $table->longText('description');
             $table->string('sellerNumber');
+            $table->string('email');
+            $table->string('name');
             $table->string('photo', 300);
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

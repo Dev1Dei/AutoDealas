@@ -45,11 +45,13 @@ class ModelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
+        $user = $request->user();
+
         $brand = Brand::find($id);
         $models = $brand->carModels;
-        return Inertia::render('Home', ['models' => $models]);
+        return Inertia::render('Home', ['models' => $models, 'user' => $user ? $user->only('id', 'name', 'email') : null,]);
     }
 
     /**

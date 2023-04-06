@@ -12,10 +12,14 @@ class FrontPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $brands = Brand::all();
-        return Inertia::render('Home', ['brands' => $brands]);
+        $user = $request->user();
+        return Inertia::render('Home', [
+            'brands' => $brands,
+            'user' => $user ? $user->only('id', 'name', 'email', 'city', 'country', 'phone') : null,
+        ]);
     }
 
     /**

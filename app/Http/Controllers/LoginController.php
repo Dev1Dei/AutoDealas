@@ -98,9 +98,9 @@ class LoginController extends Controller
  
         
 
-        if (Auth::login($credentials)) {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return view('Home', ['user' => Auth::user()] );
+            return redirect()->intended('/')->with(['user' => Auth::user()]);
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
@@ -121,11 +121,11 @@ class LoginController extends Controller
        Auth::login($user);
             $request->session()->regenerate();
  
-            return redirect()->intended('/prisijungti');
+            return redirect()->intended('/');
     }
     
     public function logout() {
         Auth::logout();
-        return redirect('authentication');
+        return Inertia::location('/');
     }
 }

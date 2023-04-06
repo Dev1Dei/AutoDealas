@@ -253,7 +253,10 @@ export default {
   props: {
     brands: Array,
     models: Array,
-    user: Object,
+    user: {
+     type: Object,
+     default: () => ({}),
+    }
   },
   methods: {
     getModels(event) {
@@ -284,9 +287,10 @@ export default {
   },
   watch:{
     user:{
-      handler(newVal, oldVal){
-        if(!this.$store.getters.getUser){
-        this.$store.commit('setUser', newVal)
+      immediate: true,
+      handler(newVal){
+        if(newVal !== null && newVal !== undefined){
+          this.$store.commit('setUser', newVal);
         }
       }
     }
@@ -302,7 +306,7 @@ export default {
   },
   mounted() {
      //if (!this.$page.props.brands){
-          router.visit('/', {preserveState:true})
+      //    router.visit('/', {preserveState:true})
      //}
       
 

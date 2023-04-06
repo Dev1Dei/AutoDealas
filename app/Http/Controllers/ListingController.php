@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use Illuminate\Support\Facades\File;
 
 class ListingController extends Controller
 {
@@ -13,7 +14,31 @@ class ListingController extends Controller
     return Inertia::render('Listings', ['listings' => $listings ]);
 
 }
+public function edit($id)
+{
+    $listing = Listing::find($id);
+    return Inertia::render('Listings/Edit', ['listing' => $listing]);
+}
+public function dashboard()
+{
+    // Fetch listings for the authenticated user
+    $user = auth()->user();
+    $listings = Listing::where('user_id', $user->id)->get();
 
+    // Pass the listings to the dashboard view
+    return Inertia::render('Dashboard', ['listings' => $listings]);
+}
+public function update(Request $request, $id)
+{
+    $listing = Listing::find($id);
+    $validated = $request->validate([
+        'price' => 'required|numeric',
+        'description' => 'required',
+    ]);
+
+    $listing->update($validated);
+    return redirect()->route('dashboard')->with('success', 'Listing updated successfully!');
+}
 
     public function show($id){
         $listing = Listing::findOrFail($id);

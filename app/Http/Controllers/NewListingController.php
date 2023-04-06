@@ -7,6 +7,7 @@ use App\Models\Brand;
 use App\Models\CarModel;
 use Inertia\Inertia;
 use App\Models\Listing;
+use Illuminate\Support\Facades\File;
 class NewListingController extends Controller
 {
     public function index()
@@ -17,13 +18,39 @@ class NewListingController extends Controller
 
     public function store(Request $request)
     {
-        
-      
+        $validatedData = $request->validate([
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
+        if ($request->hasFile('photo')) {
+            $image = $request->file('photo');
+            $name = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = 'uploads/photos';
+    
+            // Create the directory if it doesn't exist
+            if (!File::exists(storage_path('app/public/' . $destinationPath))) {
+                File::makeDirectory(storage_path('app/public/' . $destinationPath), 0755, true);
+            }
+    
+            $image->storeAs($destinationPath, $name, 'public');
+    
+            $validatedData['photo'] = $destinationPath . '/' . $name;
+            dd($validatedData);
+        }
+    
+        Listing::create($validatedData);
+    
+        return redirect('/listings');
     }
+    
+
+    
     public function create(Request $request){
       $brand = Brand::findOrFail($request->input('brand_id'));
       $carModel = CarModel::where('model', $request->input('model'))->firstOrFail();
+      $user = $request->user();
 
+      
         if (is_array($request->input('fuelType'))) {
             $fuelType = implode(',', $request->input('fuelType'));
           } else {
@@ -77,13 +104,16 @@ class NewListingController extends Controller
             'body' => 'required',
             'description' => 'required',
             'sellerNumber' => 'required',
+            'email' => 'required',
+            'name' => 'required',
+        
         ]);
         if ($request->hasFile('photo')) {
 
             $request->validate([
                 'photo' => 'mimes:jpeg,png'
             ]);
-            $request->file->store('photos', 'public');
+            $request->file('photo')->store('photos', 'public');
         }
         Listing::create([
             'title' => $request->input('title'),
@@ -108,8 +138,11 @@ class NewListingController extends Controller
             'body' => $body,
             'description' => $request->input('description'),
             'sellerNumber' => $request->input('sellerNumber'),
+            'email' => $request->input('email'),
+            'name' => $request->input('name'),
             'photo' => $request->file('photo'),
-
+            'user_id' => $user->id,
+          
             
         ]);
             

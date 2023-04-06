@@ -3,7 +3,8 @@
     <article class="p-6 flex border-t">
         <div class="left flex-shrink-0 mr-4">
           <div class="image">
-            <img class="w-70 h-52 object-cover" src="../../../public/assets/Images/test.jpg">
+            <img class="w-70 h-52 object-cover" :src="'/storage' + listing.photo" />
+
           </div>
         </div>
         <div class="description">
@@ -45,6 +46,8 @@ props: {
     title: String,
     make: String,
     model: String,
+    photo: String,
+    listing: Object,
 },
 computed: {
     link(){

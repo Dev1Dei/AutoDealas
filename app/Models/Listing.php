@@ -33,6 +33,10 @@ class Listing extends Model
         'country',
         'sellerNumber', 
         'title', 
-        'description'
+        'description',
+        'email',
+        'name',
+        'user_id',
+        
     ];
 }

@@ -22,8 +22,8 @@
                 </div>
                 <div class="mt-8">
                     <h3 class="text-lg font-bold mb-2 text-gray-700">Pardavėjas</h3>
-                    <p class="text-lg"><span class="font-bold text-gray-700">Name: </span> Seller Name</p>
-                    <p class="text-lg"><span class="font-bold text-gray-700">Email: </span> Seller Email</p>
+                    <p class="text-lg"><span class="font-bold text-gray-700">Name: </span>{{ listing.name }}</p>
+                    <p class="text-lg"><span class="font-bold text-gray-700">Email: </span>{{ listing.email }}</p>
                     <p class="text-lg"><span class="font-bold text-gray-700">Phone: </span>{{ listing.sellerNumber }}</p>
                 </div>
             </div>

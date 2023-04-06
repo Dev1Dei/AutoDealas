@@ -15,7 +15,8 @@ use App\Http\Controllers\NewListingController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ListModelController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutMeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ use App\Http\Controllers\LoginController;
 |
 */
 // All Listings
-Route::resource('/', FrontPageController::class);
+Route::get('/', [FrontPageController::class, 'index']);
 Route::resource('/models', ModelController::class);
 Route::get('/listings/sort-by-price-asc', [ListingController::class, 'sortByPriceAsc'])->name('listings.sortByPriceAsc');
 Route::get('/listings', [ListingController::class, 'index']);
@@ -38,7 +39,6 @@ Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listings
  Route::get('/register', function () {
         return inertia('Registruotis');
     });
-    
     Route::get('/prisijungti', function () {
         return inertia('Prisijungti');
     });
@@ -50,6 +50,9 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/aboutme/{id}', [AboutMeController::class, 'index'])->name('aboutme');
+
+    Route::put('/aboutme/{id}/update', [UserController::class, 'update'])->name('user.update');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::resource('/newlisting', NewListingController::class);
     Route::resource('newlisting/models', ListModelController::class)->middleware('auth');

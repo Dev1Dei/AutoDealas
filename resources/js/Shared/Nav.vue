@@ -10,7 +10,8 @@
             <div class="rounded-md bg-white shadow-xs">
               <ul class="flex flex-col list-none space-y-2 list-inside">
                 <li><Link href="/listings" class="block px-4 py-2 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Listings'}">Skelbimai</Link></li>
-                <li><Link href="/prisijungti" class="block px-4 py-2 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Prisijungti'}">Prisijungti</Link></li>
+                <li v-if="!user"><Link href="/prisijungti" class="block px-4 py-2 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Prisijungti'}">Prisijungti</Link></li>
+                <li v-else> <span class="block px-4 py-2 text-black text-xl">{{ user.name }}</span></li>
                 <li><Link href="/newlisting" class="block px-4 py-2 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'NewListing'}">Pridėti skelbimą</Link></li>
               </ul>
             </div>
@@ -24,10 +25,23 @@
             <li><Link href="/listings" class="pl-4 md:pl-0 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Listings'}">Skelbimai</Link></li>
           </div>
           <div class="border-solid border-gray-500 md:border-l border-t md:border-t-0 p-2">
-            <li><Link href="/prisijungti" class="pl-4 md:pl-0 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Prisijungti'}">Prisijungti</Link></li>
+            <div class="li-container relative">
+              <li v-if="!user">
+                <Link href="/prisijungti" class="pl-4 md:pl-0 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'Prisijungti'}">Prisijungti</Link>
+              </li>
+              <li v-else>
+                <span class="pl-4 md:pl-0 text-black text-xl">{{ user.name }}</span>
+                <div class="dropdown">
+                  <Link :href="`/aboutme/${user.id}`" class="block px-4 py-2 text-black text-xl hover:text-gray-700">About Me</Link>
+                  <a href="#" @click.prevent="logout">Log Out</a>
+                </div>
+              </li>
+            </div>
           </div>
           <div class="border-solid border-gray-500 md:border-l border-t md:border-t-0 p-2">
-            <li><Link href="/newlisting" class="pl-4 md:pl-0 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'NewListing'}">Pridėti skelbimą</Link></li>
+            <li v-if="!user"></li>
+            
+            <li v-else><Link href="/newlisting" class="pl-4 md:pl-0 text-black text-xl hover:text-gray-700" :class="{'': $page.component === 'NewListing'}">Pridėti skelbimą</Link></li>
           </div>
         </ul>
       </div>
@@ -35,6 +49,8 @@
   </template>
   
   <script>
+  import { router } from "@inertiajs/vue3";
+  import { mapState } from 'vuex';
   export default {
     components: {},
     data() {
@@ -46,11 +62,46 @@
       toggleMenu() {
         this.menuVisible = !this.menuVisible;
       },
+      logout() {
+        router.post('/logout').then(() => {
+        this.$store.commit('setUser', null);
+        this.$inertia.visit('/');
+        });
+      },
     },
+    computed: {
+      ...mapState(['user']),
+    }
   };
   </script>
 
 <style>
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.dropdown a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.li-container:hover .dropdown {
+  display: block;
+}
+
 .slide-fade-enter-active {
   transition: all .3s ease;
 }

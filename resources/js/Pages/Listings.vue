@@ -34,7 +34,7 @@
   
   
   
-  <car-listing v-for="listing in searchResults ? searchResults : this.listings" :key="listing.id" :fuelType="listing.fuelType" :model="listing.model" :make="listing.make" :engine="listing.engine"
+  <car-listing v-for="listing in searchResults ? searchResults : this.listings" :key="listing.id" :listing="listing" :photo="listing.photo" :fuelType="listing.fuelType" :model="listing.model" :make="listing.make" :engine="listing.engine"
     :year="listing.year" :transmition="listing.transmition" :title="listing.title" :carType="listing.Type"
     :city="listing.city" :price="listing.price" :id="listing.id">
   </car-listing>

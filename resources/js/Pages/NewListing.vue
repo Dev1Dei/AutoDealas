@@ -229,10 +229,10 @@
                 <label class="text-xl mb-3 mt-6">Kontaktiniai duomenys</label><br><br>
 
                 <label class="text-xl mb-6" for="price">Vardas</label>
-                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" name="name" id="name" required v-model="form.name" >
+                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" name="name" id="name"  required v-model="form.name" >
 
                 <label class="text-xl mb-6 mt-6" for="city">Šalis</label>
-                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" name="country" id="country" required v-model="form.country">
+                <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" name="country" id="country" required  v-model="form.country">
 
                 <label class="text-xl mb-6 mt-6" for="city">Miestas</label>
                 <input class="border border-gray-400 mb-4 w-full py-2 px-3" type="text" name="city" id="city" required v-model="form.city">
@@ -257,12 +257,32 @@ import { reactive, ref } from "vue";
 import Layout from "../Shared/Layout.vue";
 
 export default {
-  layout: Layout,
+    layout: Layout,
   props: {
     brands: Array,
     models: Array,
+    user: {
+     type: Object,
+     default: () => ({}),
+    }
   },
-  
+ watch:{
+    user:{
+      immediate: true,
+      handler(newVal){
+        if(newVal !== null && newVal !== undefined){
+          this.$store.commit('setUser', newVal);
+        }
+      }
+    }
+  },
+  mounted() {
+    this.form.country = this.user.country;
+    this.form.city = this.user.city;
+    this.form.sellerNumber = this.user.phone;
+    this.form.email = this.user.email;
+   
+  },
   methods: {
     getModels(event) {
       this.selected = event.target.value;
@@ -281,7 +301,6 @@ export default {
   //   models: {
   //    handler(newVal, oldVal){
   //     this.$store.commit('setModel' newVal),
-  //     console.log('kaušas bet ne kaušas');
   //     },
   //     deep:true,
   //   },
@@ -290,6 +309,7 @@ export default {
     modeliai(){
       return this.$page.props.models;
     },
+    
   },
     watch:{
         'form.kW'(val){
@@ -352,12 +372,27 @@ export default {
     return {
       selected: '',
       form: reactive({
-        model:'', make:'', title:'', year:'', engine:'', fuelType:[], color:'', transmition:[], wheelDrive:[], numberOfDoors:'', numberOfSeats:'', body:[], price:'', city:'', wheelLocation:[],
-         country:'', brand_id:'', car_model_id:'', sellerNumber:'',name:'', email:'', description:'', photo:'', kW:'', Horses:'',
+        model:'', make:'', title:'', year:'', engine:'', fuelType:[], color:'', transmition:[], wheelDrive:[], numberOfDoors:'', numberOfSeats:'', body:[], price:'',  city: this.user.city || '', wheelLocation:[],
+        country: this.user.country || '', brand_id:'', car_model_id:'', sellerNumber: this.user.phone || '',name: this.user.name || '', email: this.user.email || '', description:'', photo:'', kW:'', Horses:'',
       }),
       updatingKw:false,
       updatingHorses:false,
     }
   },
+  create() {
+  const formData = new FormData();
+  Object.entries(this.form).forEach(([key, value]) => {
+    if (key === 'photo') {
+      const fileInput = document.getElementById('photo');
+      if (fileInput.files.length > 0) {
+        formData.append(key, fileInput.files[0]);
+      }
+    } else {
+      formData.append(key, value);
+    }
+  });
+
+  router.post('/listings', formData);
+},
 };
 </script>
